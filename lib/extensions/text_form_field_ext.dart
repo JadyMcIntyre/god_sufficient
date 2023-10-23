@@ -64,8 +64,13 @@ extension TextFormFieldExtension on TextFormField {
               size: 16,
               color: GodSufficientColors.apricotAccent,
             )),
+        focusedBorder: const OutlineInputBorder(
+          borderSide: BorderSide(color: GodSufficientColors.apricotAccent),
+        ),
         labelText: labelText,
+        labelStyle: const TextStyle(color: GodSufficientColors.text),
         hintText: hintText,
+        hintStyle: const TextStyle(color: GodSufficientColors.apricotAccent),
       ),
     );
   }

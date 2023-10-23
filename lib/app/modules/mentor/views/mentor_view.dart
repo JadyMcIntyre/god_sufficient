@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:god_sufficient/extensions/text_form_field_ext.dart';
 
 import '../controllers/mentor_controller.dart';
 import 'package:god_sufficient/assets/colors.dart';
@@ -25,36 +26,18 @@ class MentorView extends GetView<MentorController> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 16),
+                child: Container(
+                  color: GodSufficientColors.greyBlueAccent,
+                  child: TextFormField()
+                      .defaultTextField('Full name', 'e.g. John Doe'),
+                ),
+              ),
               Container(
                 color: GodSufficientColors.greyBlueAccent,
-                child: TextFormField(
-                  keyboardType: TextInputType.name,
-                  cursorHeight: 19,
-                  style: const TextStyle(
-                    color: GodSufficientColors.text,
-                  ),
-                  decoration: InputDecoration(
-                    suffixIcon: IconButton(
-                        onPressed: () {
-                          print('object');
-                        },
-                        icon: const Icon(
-                          Icons.close,
-                          size: 16,
-                          color: GodSufficientColors.apricotAccent,
-                        )),
-                    focusedBorder: const OutlineInputBorder(
-                      borderSide:
-                          BorderSide(color: GodSufficientColors.apricotAccent),
-                    ),
-                    labelText: 'Full name',
-                    labelStyle:
-                        const TextStyle(color: GodSufficientColors.text),
-                    hintText: 'e.g. John Doe',
-                    hintStyle: const TextStyle(
-                        color: GodSufficientColors.apricotAccent),
-                  ),
-                ),
+                child:
+                    TextFormField().defaultTextField('Email', 'e.g. John Doe'),
               ),
             ],
           ),
