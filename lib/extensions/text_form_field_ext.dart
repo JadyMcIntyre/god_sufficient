@@ -50,11 +50,46 @@ extension TextFormFieldExtension on TextFormField {
       key: key,
       controller: controller,
       cursorHeight: 19,
+      cursorColor: GodSufficientColors.text,
       validator: validator,
       style: const TextStyle(
         color: GodSufficientColors.text,
       ),
       decoration: InputDecoration(
+        suffixIcon: IconButton(
+            onPressed: () {
+              controller!.clear();
+            },
+            icon: const Icon(
+              Icons.close,
+              size: 16,
+              color: GodSufficientColors.apricotAccent,
+            )),
+        focusedBorder: const OutlineInputBorder(
+          borderSide: BorderSide(color: GodSufficientColors.apricotAccent),
+        ),
+        labelText: labelText,
+        labelStyle: const TextStyle(color: GodSufficientColors.text),
+        hintText: hintText,
+        hintStyle: const TextStyle(color: GodSufficientColors.apricotAccent),
+      ),
+    );
+  }
+
+  TextFormField descriptionTextField(String labelText, String hintText) {
+    return TextFormField(
+      key: key,
+      controller: controller,
+      keyboardType: TextInputType.multiline,
+      maxLines: null,
+      cursorHeight: 19,
+      cursorColor: GodSufficientColors.text,
+      validator: validator,
+      style: const TextStyle(
+        color: GodSufficientColors.text,
+      ),
+      decoration: InputDecoration(
+        contentPadding: const EdgeInsets.symmetric(vertical: 40),
         suffixIcon: IconButton(
             onPressed: () {
               controller!.clear();
@@ -81,6 +116,7 @@ extension TextFormFieldExtension on TextFormField {
       keyboardType: TextInputType.phone,
       controller: controller,
       cursorHeight: 19,
+      cursorColor: GodSufficientColors.text,
       validator: validator,
       style: const TextStyle(
         color: GodSufficientColors.text,
@@ -95,8 +131,13 @@ extension TextFormFieldExtension on TextFormField {
               size: 16,
               color: GodSufficientColors.apricotAccent,
             )),
+        focusedBorder: const OutlineInputBorder(
+          borderSide: BorderSide(color: GodSufficientColors.apricotAccent),
+        ),
         labelText: labelText,
+        labelStyle: const TextStyle(color: GodSufficientColors.text),
         hintText: hintText,
+        hintStyle: const TextStyle(color: GodSufficientColors.apricotAccent),
       ),
     );
   }
