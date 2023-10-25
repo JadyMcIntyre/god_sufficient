@@ -1,6 +1,6 @@
 # god_sufficient
 
-# Become Mentor View
+## Become Mentor View
 I have created the become a mentor page, the very basic UI work is mostly done:
     - Need to get Gradient button nicer
     - Strange that words are pressed right against text field
