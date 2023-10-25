@@ -32,10 +32,7 @@ class GradientButton extends StatelessWidget {
             begin: Alignment.centerLeft,
             end: Alignment.centerRight,
             stops: [0, 1],
-            colors: [
-              GodSufficientColors.apricotAccent,
-              GodSufficientColors.apricotAccent
-            ],
+            colors: [GSColorData.accent, GSColorData.accent],
           ),
           borderRadius: BorderRadius.all(Radius.circular(12)),
         ),

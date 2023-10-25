@@ -6,6 +6,7 @@ import 'package:god_sufficient/extensions/text_form_field_ext.dart';
 import 'package:god_sufficient/widgets/buttons/gradient_button.dart';
 import 'package:god_sufficient/widgets/buttons/gs_outlined_button.dart';
 
+import '../../../routes/app_pages.dart';
 import '../controllers/mentor_controller.dart';
 import 'package:god_sufficient/assets/colors.dart';
 
@@ -14,7 +15,7 @@ class MentorView extends GetView<MentorController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: GodSufficientColors.background,
+      backgroundColor: GSColorData.primary,
       appBar: AppBar().defaultAppBar(titleText: 'Become A Mentor'),
       body: Center(
         child: Padding(
@@ -25,26 +26,26 @@ class MentorView extends GetView<MentorController> {
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 16),
                 child: Container(
-                  color: GodSufficientColors.greyBlueAccent,
+                  color: GSColorData.secondary,
                   child: TextFormField()
                       .defaultTextField('Full name', 'E.g. John Doe'),
                 ),
               ),
               Container(
-                color: GodSufficientColors.greyBlueAccent,
+                color: GSColorData.secondary,
                 child: TextFormField()
                     .defaultTextField('Email', 'E.g. john@gmail.com'),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 16),
                 child: Container(
-                  color: GodSufficientColors.greyBlueAccent,
+                  color: GSColorData.secondary,
                   child: TextFormField()
                       .phoneTextField('Contact number', 'E.g. 082 123 4567'),
                 ),
               ),
               Container(
-                color: GodSufficientColors.greyBlueAccent,
+                color: GSColorData.secondary,
                 child: TextFormField().descriptionTextField(
                     'Description', 'Tell us a little bit about yourself.'),
               ),
@@ -57,7 +58,9 @@ class MentorView extends GetView<MentorController> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             GSOutlinedButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.toNamed(Routes.LEARN);
+              },
               child: const Text('Cancel'),
             ),
             GradientButton(

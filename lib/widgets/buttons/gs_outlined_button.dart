@@ -23,9 +23,9 @@ class GSOutlinedButton extends StatelessWidget {
       decoration: const BoxDecoration(shape: BoxShape.circle),
       child: OutlinedButton(
         style: OutlinedButton.styleFrom(
-          backgroundColor: GodSufficientColors.greyBlueAccent,
-          foregroundColor: GodSufficientColors.text,
-          side: const BorderSide(color: GodSufficientColors.apricotAccent),
+          backgroundColor: GSColorData.secondary,
+          foregroundColor: GSColorData.text,
+          side: const BorderSide(color: GSColorData.accent),
         ),
         onPressed: onPressed,
         child: child ?? const SizedBox.shrink(),

@@ -6,8 +6,7 @@ extension AppBarExtension on AppBar {
       {bool centerTitle = true,
       String titleText = 'change title',
       TextStyle? titleTextStyle}) {
-    TextStyle defaultTextStyle =
-        const TextStyle(color: GodSufficientColors.text);
+    TextStyle defaultTextStyle = const TextStyle(color: GSColorData.text);
     return AppBar(
       key: const Key('app_bar_default'),
       titleSpacing: centerTitle ? 0 : -20,
@@ -17,7 +16,7 @@ extension AppBarExtension on AppBar {
       ),
       centerTitle: centerTitle,
       leadingWidth: 80,
-      backgroundColor: GodSufficientColors.greyBlueAccent,
+      backgroundColor: GSColorData.secondary,
     );
   }
 }

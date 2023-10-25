@@ -14,7 +14,7 @@ extension TextFormFieldExtension on TextFormField {
       inputFormatters: [FilteringTextInputFormatter.digitsOnly],
       cursorHeight: 19,
       style: const TextStyle(
-        color: GodSufficientColors.text,
+        color: GSColorData.text,
       ),
       decoration: InputDecoration(
         suffixIcon: IconButton(
@@ -24,7 +24,7 @@ extension TextFormFieldExtension on TextFormField {
             icon: const Icon(
               Icons.close,
               size: 16,
-              color: GodSufficientColors.apricotAccent,
+              color: GSColorData.accent,
             )),
         labelText: labelText,
         hintText: hintText,
@@ -50,10 +50,10 @@ extension TextFormFieldExtension on TextFormField {
       key: key,
       controller: controller,
       cursorHeight: 19,
-      cursorColor: GodSufficientColors.text,
+      cursorColor: GSColorData.text,
       validator: validator,
       style: const TextStyle(
-        color: GodSufficientColors.text,
+        color: GSColorData.text,
       ),
       decoration: InputDecoration(
         suffixIcon: IconButton(
@@ -63,15 +63,15 @@ extension TextFormFieldExtension on TextFormField {
             icon: const Icon(
               Icons.close,
               size: 16,
-              color: GodSufficientColors.apricotAccent,
+              color: GSColorData.accent,
             )),
         focusedBorder: const OutlineInputBorder(
-          borderSide: BorderSide(color: GodSufficientColors.apricotAccent),
+          borderSide: BorderSide(color: GSColorData.accent),
         ),
         labelText: labelText,
-        labelStyle: const TextStyle(color: GodSufficientColors.text),
+        labelStyle: const TextStyle(color: GSColorData.text),
         hintText: hintText,
-        hintStyle: const TextStyle(color: GodSufficientColors.apricotAccent),
+        hintStyle: const TextStyle(color: GSColorData.accent),
       ),
     );
   }
@@ -83,10 +83,10 @@ extension TextFormFieldExtension on TextFormField {
       keyboardType: TextInputType.multiline,
       maxLines: null,
       cursorHeight: 19,
-      cursorColor: GodSufficientColors.text,
+      cursorColor: GSColorData.text,
       validator: validator,
       style: const TextStyle(
-        color: GodSufficientColors.text,
+        color: GSColorData.text,
       ),
       decoration: InputDecoration(
         contentPadding: const EdgeInsets.symmetric(vertical: 40),
@@ -97,15 +97,15 @@ extension TextFormFieldExtension on TextFormField {
             icon: const Icon(
               Icons.close,
               size: 16,
-              color: GodSufficientColors.apricotAccent,
+              color: GSColorData.accent,
             )),
         focusedBorder: const OutlineInputBorder(
-          borderSide: BorderSide(color: GodSufficientColors.apricotAccent),
+          borderSide: BorderSide(color: GSColorData.accent),
         ),
         labelText: labelText,
-        labelStyle: const TextStyle(color: GodSufficientColors.text),
+        labelStyle: const TextStyle(color: GSColorData.text),
         hintText: hintText,
-        hintStyle: const TextStyle(color: GodSufficientColors.apricotAccent),
+        hintStyle: const TextStyle(color: GSColorData.accent),
       ),
     );
   }
@@ -116,10 +116,10 @@ extension TextFormFieldExtension on TextFormField {
       keyboardType: TextInputType.phone,
       controller: controller,
       cursorHeight: 19,
-      cursorColor: GodSufficientColors.text,
+      cursorColor: GSColorData.text,
       validator: validator,
       style: const TextStyle(
-        color: GodSufficientColors.text,
+        color: GSColorData.text,
       ),
       decoration: InputDecoration(
         suffixIcon: IconButton(
@@ -129,15 +129,15 @@ extension TextFormFieldExtension on TextFormField {
             icon: const Icon(
               Icons.close,
               size: 16,
-              color: GodSufficientColors.apricotAccent,
+              color: GSColorData.accent,
             )),
         focusedBorder: const OutlineInputBorder(
-          borderSide: BorderSide(color: GodSufficientColors.apricotAccent),
+          borderSide: BorderSide(color: GSColorData.accent),
         ),
         labelText: labelText,
-        labelStyle: const TextStyle(color: GodSufficientColors.text),
+        labelStyle: const TextStyle(color: GSColorData.text),
         hintText: hintText,
-        hintStyle: const TextStyle(color: GodSufficientColors.apricotAccent),
+        hintStyle: const TextStyle(color: GSColorData.accent),
       ),
     );
   }
@@ -152,7 +152,7 @@ extension TextFormFieldExtension on TextFormField {
         obscureText: !showPassword.value,
         cursorHeight: 19,
         style: const TextStyle(
-          color: GodSufficientColors.text,
+          color: GSColorData.text,
         ),
         decoration: InputDecoration(
           labelText: labelText,
