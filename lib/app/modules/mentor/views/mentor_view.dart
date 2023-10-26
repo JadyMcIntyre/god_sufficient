@@ -61,7 +61,6 @@ class MentorView extends GetView<MentorController> {
               onPressed: () {
                 Get.toNamed(Routes.LEARN);
               },
-              child: const Text('Cancel'),
             ),
             GradientButton(
               onTap: () {},

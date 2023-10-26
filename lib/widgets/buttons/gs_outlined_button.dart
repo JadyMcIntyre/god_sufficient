@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:god_sufficient/assets/colors.dart';
 
 class GSOutlinedButton extends StatelessWidget {
-  final VoidCallback onPressed;
-  final Widget? child;
+  final VoidCallback? onPressed;
+  final Text? text;
   final double? width;
   final double? height;
 
   const GSOutlinedButton({
     super.key,
     required this.onPressed,
-    this.child,
+    this.text,
     this.width,
     this.height,
   });
@@ -19,7 +20,7 @@ class GSOutlinedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 44,
-      width: 180,
+      width: width ?? 180,
       decoration: const BoxDecoration(shape: BoxShape.circle),
       child: OutlinedButton(
         style: OutlinedButton.styleFrom(
@@ -27,8 +28,11 @@ class GSOutlinedButton extends StatelessWidget {
           foregroundColor: GSColorData.text,
           side: const BorderSide(color: GSColorData.accent),
         ),
-        onPressed: onPressed,
-        child: child ?? const SizedBox.shrink(),
+        onPressed: onPressed ??
+            () {
+              Get.back();
+            },
+        child: text ?? const Text('Back'),
       ),
     );
   }

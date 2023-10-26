@@ -8,15 +8,18 @@ class GradientButton extends StatelessWidget {
   final double? width;
   final double? height;
   final EdgeInsetsGeometry? margin;
+  final Color? colorBegin;
+  final Color? colorEnd;
 
-  const GradientButton({
-    super.key,
-    required this.onTap,
-    this.text,
-    this.width,
-    this.height,
-    this.margin,
-  });
+  const GradientButton(
+      {super.key,
+      required this.onTap,
+      this.text,
+      this.width,
+      this.height,
+      this.margin,
+      this.colorBegin,
+      this.colorEnd});
 
   @override
   Widget build(BuildContext context) {
@@ -26,15 +29,18 @@ class GradientButton extends StatelessWidget {
         height: 44,
         width: 180,
         margin: margin ?? EdgeInsets.zero,
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           border: null,
           gradient: LinearGradient(
             begin: Alignment.centerLeft,
             end: Alignment.centerRight,
-            stops: [0, 1],
-            colors: [GSColorData.accent, GSColorData.accent],
+            stops: const [0, 1],
+            colors: [
+              colorBegin ?? GSColorData.accent,
+              colorEnd ?? GSColorData.accent
+            ],
           ),
-          borderRadius: BorderRadius.all(Radius.circular(12)),
+          borderRadius: const BorderRadius.all(Radius.circular(12)),
         ),
         child: ElevatedButton(
             style: ElevatedButton.styleFrom(
