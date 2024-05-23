@@ -36,6 +36,8 @@ dependencies:
   retrofit: ^4.1.0
   dio: ^5.4.3+1
   json_annotation: ^4.9.0
+  kiwi: ^4.1.0
+  shared_preferences: ^2.2.3
 
 dev_dependencies:
   flutter_test:
@@ -50,6 +52,7 @@ dev_dependencies:
   json_serializable: ^6.8.0
   retrofit_generator: ^8.1.0
   build_runner: ^2.4.10
+  kiwi_generator: ^4.1.0
 
 
 # For information on the generic Dart part of this file, see the

@@ -40,9 +40,9 @@ class Button extends StatelessWidget {
             Expanded(
               child: ElevatedButton(
                 style: const ButtonStyle(
-                  backgroundColor: MaterialStatePropertyAll(GSColors.gsTeal),
-                  foregroundColor: MaterialStatePropertyAll(Colors.white),
-                  shadowColor: MaterialStatePropertyAll(
+                  backgroundColor: WidgetStatePropertyAll(GSColors.gsTeal),
+                  foregroundColor: WidgetStatePropertyAll(Colors.white),
+                  shadowColor: WidgetStatePropertyAll(
                     GSColors.gsOffWhite,
                   ),
                 ),
