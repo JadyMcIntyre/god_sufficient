@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
-import '../../../../../routes/app_pages.dart';
+import '../../../../../config/routes/app_pages.dart';
 import '../../../widgets/button.dart';
 import '../../section/views/section_view.dart';
 

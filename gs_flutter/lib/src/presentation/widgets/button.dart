@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:god_sufficient/theme/gs_theme_data.dart';
+import 'package:god_sufficient/config/theme/gs_theme_data.dart';
 
 class Button extends StatelessWidget {
   final bool hasOneButton;
@@ -60,8 +60,7 @@ class Button extends StatelessWidget {
               child: Expanded(
                 child: OutlinedButton(
                   style: const ButtonStyle(
-                    foregroundColor:
-                        MaterialStatePropertyAll(GSColors.gsOrange),
+                    foregroundColor: MaterialStatePropertyAll(GSColors.gsOrange),
                     side: MaterialStatePropertyAll(
                       BorderSide(
                         color: GSColors.gsOrange,
