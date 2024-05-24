@@ -1,4 +1,5 @@
 import 'package:god_sufficient/core/resources/gs_api_provider.dart';
+import 'package:god_sufficient/src/presentation/features/home/controllers/home_controller.dart';
 import 'package:kiwi/kiwi.dart';
 
 import '../../features/mentor/data/data_sources/remote/mentor_datasource.dart';
@@ -16,12 +17,11 @@ abstract class Injector {
     _$Injector()._configure;
   }
 
-  static final resolve = container.resolve;
-
   @Register.singleton(GetMentorUseCase)
   void _configureUseCases();
 
   @Register.factory(FindMentorController)
+  @Register.factory(HomeController)
   void _configureControllers();
 
   @Register.singleton(MentorRepository, from: MentorRepositoryImpl)
