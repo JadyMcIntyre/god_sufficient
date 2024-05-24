@@ -1,12 +1,12 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'injector_config.dart';
+part of 'injector.dart';
 
 // **************************************************************************
 // KiwiInjectorGenerator
 // **************************************************************************
 
-class _$InjectorConfig extends InjectorConfig {
+class _$Injector extends Injector {
   @override
   void _configureUseCases() {
     final KiwiContainer container = KiwiContainer();
@@ -17,15 +17,7 @@ class _$InjectorConfig extends InjectorConfig {
   void _configureControllers() {
     final KiwiContainer container = KiwiContainer();
     container
-      ..registerFactory((c) => FindMentorController(c<GetMentorUseCase>()))
-      ..registerFactory((c) => ChurchController())
-      ..registerFactory((c) => VolunteerController())
-      ..registerFactory((c) => AppsGalleryController())
-      ..registerFactory((c) => LearnController())
-      ..registerFactory((c) => GetHelpController())
-      ..registerFactory((c) => BecomeMentorController())
-      ..registerFactory((c) => HomeController())
-      ..registerFactory((c) => SectionController());
+        .registerFactory((c) => FindMentorController(c<GetMentorUseCase>()));
   }
 
   @override
@@ -43,5 +35,8 @@ class _$InjectorConfig extends InjectorConfig {
   }
 
   @override
-  void _configureCommon() {}
+  void _configureCommon() {
+    final KiwiContainer container = KiwiContainer();
+    container.registerSingleton((c) => GSApiProvider());
+  }
 }
