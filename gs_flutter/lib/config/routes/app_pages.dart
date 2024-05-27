@@ -1,21 +1,21 @@
 import 'package:get/get.dart';
 
-import '../../../src/presentation/features/community/church/bindings/church_binding.dart';
-import '../../../src/presentation/features/community/church/views/church_view.dart';
-import '../../../src/presentation/features/community/volunteer/bindings/volunteer_binding.dart';
-import '../../../src/presentation/features/community/volunteer/views/volunteer_view.dart';
-import '../../../src/presentation/features/grow/app/apps_gallery/bindings/apps_gallery_binding.dart';
-import '../../../src/presentation/features/grow/app/apps_gallery/views/apps_gallery_view.dart';
-import '../../../src/presentation/features/grow/learn/bindings/learn_binding.dart';
-import '../../../src/presentation/features/grow/learn/views/learn_view.dart';
-import '../../../src/presentation/features/home/bindings/home_binding.dart';
-import '../../../src/presentation/features/home/views/home_view.dart';
-import '../../src/presentation/features/help/get_help/bindings/get_help_binding.dart';
-import '../../src/presentation/features/help/get_help/views/get_help_view.dart';
-import '../../src/presentation/features/help/mentor/become_mentor/bindings/become_mentor_binding.dart';
-import '../../src/presentation/features/help/mentor/become_mentor/views/become_mentor_view.dart';
-import '../../src/presentation/features/help/mentor/find_mentor/bindings/find_mentor_binding.dart';
-import '../../src/presentation/features/help/mentor/find_mentor/views/find_mentor_view.dart';
+import '../../features/community/church/bindings/church_binding.dart';
+import '../../features/community/church/views/church_view.dart';
+import '../../features/community/volunteer/bindings/volunteer_binding.dart';
+import '../../features/community/volunteer/views/volunteer_view.dart';
+import '../../features/grow/app/apps_gallery/bindings/apps_gallery_binding.dart';
+import '../../features/grow/app/apps_gallery/views/apps_gallery_view.dart';
+import '../../features/grow/learn/bindings/learn_binding.dart';
+import '../../features/grow/learn/views/learn_view.dart';
+import '../../features/home/bindings/home_binding.dart';
+import '../../features/home/views/home_view.dart';
+import '../../features/help/get_help/bindings/get_help_binding.dart';
+import '../../features/help/get_help/views/get_help_view.dart';
+import '../../features/help/mentor/become_mentor/bindings/become_mentor_binding.dart';
+import '../../features/help/mentor/become_mentor/views/become_mentor_view.dart';
+import '../../features/help/mentor/find_mentor/bindings/find_mentor_binding.dart';
+import '../../features/help/mentor/find_mentor/views/find_mentor_view.dart';
 
 part 'app_routes.dart';
 
