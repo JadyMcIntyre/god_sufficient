@@ -17,7 +17,7 @@ class _$Injector extends Injector {
   void _configureControllers() {
     final KiwiContainer container = KiwiContainer();
     container
-      ..registerFactory((c) => FindMentorController(c<GetMentorUseCase>()))
+      ..registerFactory((c) => FindMentorController())
       ..registerFactory((c) => HomeController());
   }
 
