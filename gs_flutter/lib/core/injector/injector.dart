@@ -14,7 +14,7 @@ abstract class Injector {
   static KiwiContainer container = KiwiContainer();
 
   static void setup() {
-    _$Injector()._configure;
+    _$Injector()._configure();
   }
 
   @Register.singleton(GetMentorUseCase)
