@@ -28,8 +28,7 @@ class FindMentorController extends GetxController {
   }
 
   void getMentors() async {
-    var mentor = await useCase.call();
-    var name = mentor?.name;
-    print(name);
+    var mentors = await useCase.call();
+    if (mentors?.mentors?.isNotEmpty ?? false) {}
   }
 }
