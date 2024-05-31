@@ -1,11 +1,11 @@
 import 'dart:async';
 
-import 'package:dio/dio.dart' as dio;
+import 'package:dio/dio.dart';
 
 class GSApiProvider {
-  late final dio.Dio _dio;
+  Dio dio = Dio();
 
-  Future<dio.Response> getAsync(String url) async {
-    return await _dio.get(url);
+  Future<Response> getAsync(String url) async {
+    return await dio.get(url);
   }
 }
