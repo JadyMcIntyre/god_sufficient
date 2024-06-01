@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:dio/dio.dart';
 import 'package:god_sufficient/core/constants/constants.dart';
 import 'package:god_sufficient/core/resources/gs_api_provider.dart';
@@ -13,7 +15,8 @@ class MentorDatasource {
     try {
       final response = await apiProvider.getAsync(apiBaseUrl);
       if (response.statusCode == 200) {
-        return (MentorsModel.fromJson(response.data));
+        var jsonResponse = jsonDecode(response.data);
+        return (MentorsModel.fromJson(jsonResponse));
       } else {
         return null;
       }
