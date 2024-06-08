@@ -25,7 +25,8 @@ class _$Injector extends Injector {
       ..registerFactory((c) => LearnController())
       ..registerFactory((c) => GetHelpController())
       ..registerFactory((c) => BecomeMentorController())
-      ..registerFactory((c) => FindMentorController())
+      ..registerFactory(
+          (c) => FindMentorController(useCase: c<GetMentorUseCase>()))
       ..registerFactory((c) => SectionController());
   }
 

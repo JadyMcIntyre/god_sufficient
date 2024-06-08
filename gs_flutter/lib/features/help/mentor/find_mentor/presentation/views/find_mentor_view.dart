@@ -26,7 +26,7 @@ class FindMentorView extends GetView<FindMentorController> {
           ),
           itemBuilder: (context, index) {
             return GestureDetector(
-              onTap: () => controller.onTap(index),
+              onTap: () => controller.getMentors(),
               child: Card(
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
