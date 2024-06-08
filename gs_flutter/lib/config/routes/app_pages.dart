@@ -16,13 +16,15 @@ import '../../features/help/mentor/find_mentor/presentation/bindings/find_mentor
 import '../../features/help/mentor/find_mentor/presentation/views/find_mentor_view.dart';
 import '../../features/home/presentation/bindings/home_binding.dart';
 import '../../features/home/presentation/views/home_view.dart';
+import '../../features/login/presentation/bindings/login_binding.dart';
+import '../../features/login/presentation/views/login_view.dart';
 
 part 'app_routes.dart';
 
 class AppPages {
   AppPages._();
 
-  static const initial = Routes.home;
+  static const initial = Routes.login;
 
   static final routes = [
     GetPage(
@@ -64,6 +66,11 @@ class AppPages {
       name: _Paths.findMentor,
       page: () => const FindMentorView(),
       binding: FindMentorBinding(),
+    ),
+    GetPage(
+      name: _Paths.login,
+      page: () => const LoginView(),
+      binding: LoginBinding(),
     ),
   ];
 }

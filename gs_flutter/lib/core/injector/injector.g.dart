@@ -18,7 +18,8 @@ class _$Injector extends Injector {
     final KiwiContainer container = KiwiContainer();
     container
       ..registerFactory((c) => FindMentorController())
-      ..registerFactory((c) => HomeController());
+      ..registerFactory((c) => HomeController())
+      ..registerFactory((c) => LoginController());
   }
 
   @override

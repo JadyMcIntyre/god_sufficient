@@ -1,4 +1,5 @@
 import 'package:god_sufficient/core/resources/gs_api_provider.dart';
+import 'package:god_sufficient/features/login/presentation/controllers/login_controller.dart';
 import 'package:kiwi/kiwi.dart';
 
 import '../../features/help/mentor/find_mentor/data/data_sources/remote/mentor_datasource.dart';
@@ -22,6 +23,7 @@ abstract class Injector {
 
   @Register.factory(FindMentorController)
   @Register.factory(HomeController)
+  @Register.factory(LoginController)
   void _configureControllers();
 
   @Register.singleton(MentorRepository, from: MentorRepositoryImpl)

@@ -13,6 +13,7 @@ abstract class Routes {
   static const findMentor = _Paths.findMentor;
   static const learn = _Paths.learn;
   static const becomeMentor = _Paths.becomeMentor;
+  static const login = _Paths.login;
 }
 
 abstract class _Paths {
@@ -27,4 +28,5 @@ abstract class _Paths {
   static const findMentor = '/find-mentor';
   static const learn = '/learn';
   static const becomeMentor = '/become-mentor';
+  static const login = '/login';
 }
