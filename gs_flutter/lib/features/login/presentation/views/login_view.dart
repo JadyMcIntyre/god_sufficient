@@ -4,6 +4,7 @@ import 'package:god_sufficient/config/routes/app_pages.dart';
 import 'package:god_sufficient/core/widgets/genericbody.dart';
 
 import '../../../../core/widgets/button.dart';
+import '../../../../core/widgets/gs_form.dart';
 import '../controllers/login_controller.dart';
 
 class LoginView extends GetView<LoginController> {
@@ -17,6 +18,21 @@ class LoginView extends GetView<LoginController> {
       ),
       body: GenericBody(
         children: [
+          const Form(
+              child: Column(
+            children: [
+              GSForm(
+                label: 'Email',
+                hint: 'johndoe@gmail.com',
+                iconPath: Icons.mail,
+              ),
+              GSForm(
+                label: 'Password',
+                hint: '',
+                iconPath: Icons.lock,
+              ),
+            ],
+          )),
           Button.oneButton(
             elevatedBtText: 'Login',
             elevatedBtAction: () {
