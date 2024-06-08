@@ -1,5 +1,12 @@
 import 'package:god_sufficient/core/resources/gs_api_provider.dart';
+import 'package:god_sufficient/features/community/church/presentation/controllers/church_controller.dart';
+import 'package:god_sufficient/features/community/volunteer/presentation/controllers/volunteer_controller.dart';
+import 'package:god_sufficient/features/grow/app/apps_gallery/presentation/controllers/apps_gallery_controller.dart';
+import 'package:god_sufficient/features/grow/learn/presentation/controllers/learn_controller.dart';
+import 'package:god_sufficient/features/help/get_help/presentation/controllers/get_help_controller.dart';
+import 'package:god_sufficient/features/help/mentor/become_mentor/presentation/controllers/become_mentor_controller.dart';
 import 'package:god_sufficient/features/login/presentation/controllers/login_controller.dart';
+import 'package:god_sufficient/features/section/presentation/controllers/section_controller.dart';
 import 'package:kiwi/kiwi.dart';
 
 import '../../features/help/mentor/find_mentor/data/data_sources/remote/mentor_datasource.dart';
@@ -21,9 +28,16 @@ abstract class Injector {
   @Register.singleton(GetMentorUseCase)
   void _configureUseCases();
 
-  @Register.factory(FindMentorController)
   @Register.factory(HomeController)
   @Register.factory(LoginController)
+  @Register.factory(ChurchController)
+  @Register.factory(VolunteerController)
+  @Register.factory(AppsGalleryController)
+  @Register.factory(LearnController)
+  @Register.factory(GetHelpController)
+  @Register.factory(BecomeMentorController)
+  @Register.factory(FindMentorController)
+  @Register.factory(SectionController)
   void _configureControllers();
 
   @Register.singleton(MentorRepository, from: MentorRepositoryImpl)
