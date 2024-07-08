@@ -5,62 +5,57 @@ class SectionCardWidget extends StatelessWidget {
     super.key,
     required this.title,
     required this.body,
-    required this.onTap,
     required this.button,
   });
 
   final String title;
   final String body;
-  final VoidCallback onTap;
   final Widget button;
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Card(
-        elevation: 10,
-        child: Padding(
-          padding: const EdgeInsets.all(
-            16,
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Align(
-                alignment: Alignment.center,
-                child: Card(
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(
-                      vertical: 24,
-                      horizontal: MediaQuery.of(context).size.width * 0.3,
-                    ),
-                    child: const Icon(
-                      Icons.image,
-                      size: 50,
-                    ),
+    return Card(
+      elevation: 10,
+      child: Padding(
+        padding: const EdgeInsets.all(
+          16,
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Align(
+              alignment: Alignment.center,
+              child: Card(
+                child: Padding(
+                  padding: EdgeInsets.symmetric(
+                    vertical: 24,
+                    horizontal: MediaQuery.of(context).size.width * 0.3,
+                  ),
+                  child: const Icon(
+                    Icons.image,
+                    size: 50,
                   ),
                 ),
               ),
-              const SizedBox(
-                height: 16,
-              ),
-              Text(
-                title,
-              ),
-              const SizedBox(
-                height: 8,
-              ),
-              Text(
-                body,
-              ),
-              const SizedBox(
-                height: 16,
-              ),
-              button,
-            ],
-          ),
+            ),
+            const SizedBox(
+              height: 16,
+            ),
+            Text(
+              title,
+            ),
+            const SizedBox(
+              height: 8,
+            ),
+            Text(
+              body,
+            ),
+            const SizedBox(
+              height: 16,
+            ),
+            button,
+          ],
         ),
       ),
     );
