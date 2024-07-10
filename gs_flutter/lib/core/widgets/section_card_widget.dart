@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:god_sufficient/config/theme/gs_theme_data.dart';
 
 class SectionCardWidget extends StatelessWidget {
   const SectionCardWidget({
@@ -44,12 +45,14 @@ class SectionCardWidget extends StatelessWidget {
             ),
             Text(
               title,
+              style: GSText.title,
             ),
             const SizedBox(
               height: 8,
             ),
             Text(
               body,
+              style: GSText.body,
             ),
             const SizedBox(
               height: 16,
