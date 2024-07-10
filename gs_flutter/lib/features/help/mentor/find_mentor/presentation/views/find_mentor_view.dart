@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:god_sufficient/config/theme/gs_theme_data.dart';
 
 import '../controllers/find_mentor_controller.dart';
 
@@ -20,13 +21,13 @@ class FindMentorView extends GetView<FindMentorController> {
           itemCount: 1,
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
-            childAspectRatio: 0.8,
+            childAspectRatio: 0.75,
             mainAxisSpacing: 8,
             crossAxisSpacing: 8,
           ),
           itemBuilder: (context, index) {
             return GestureDetector(
-              onTap: () => controller.getMentors(),
+              onTap: () => controller.onTap(0),
               child: Card(
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -41,12 +42,20 @@ class FindMentorView extends GetView<FindMentorController> {
                       ),
                       Text(
                         controller.mentors[index].name,
+                        style: GSText.title,
                       ),
-                      Text(
-                        controller.mentors[index].testimony,
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 8),
+                        child: Text(
+                          controller.mentors[index].testimony,
+                          style: GSText.body,
+                          textAlign: TextAlign.center,
+                        ),
                       ),
                       Text(
                         controller.mentors[index].expertise,
+                        style: GSText.body,
+                        textAlign: TextAlign.center,
                       ),
                     ],
                   ),

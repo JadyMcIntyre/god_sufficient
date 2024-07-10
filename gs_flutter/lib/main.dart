@@ -15,10 +15,8 @@ class GodSufficient extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      themeMode: ThemeMode.light,
-      darkTheme: ThemeData.dark(),
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal, brightness: Brightness.dark),
       ),
       initialRoute: AppPages.initial,
       getPages: AppPages.routes,

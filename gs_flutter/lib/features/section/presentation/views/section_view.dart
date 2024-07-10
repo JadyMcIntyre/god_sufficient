@@ -40,7 +40,6 @@ class SectionView extends GetView<SectionController> {
             SectionCardWidget(
               title: featureOneTitle,
               body: featureOneBody,
-              onTap: featureOneOnTap,
               button: featureOneButton,
             ),
             const SizedBox(
@@ -49,7 +48,6 @@ class SectionView extends GetView<SectionController> {
             SectionCardWidget(
               title: featureTwoTitle,
               body: featureTwoBody,
-              onTap: featureTwoOnTap,
               button: featureTwoButton,
             ),
           ],

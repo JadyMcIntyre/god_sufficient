@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:god_sufficient/config/theme/gs_theme_data.dart';
 
 class GSForm extends StatelessWidget {
   final String label;
@@ -20,8 +21,9 @@ class GSForm extends StatelessWidget {
           iconPath,
           size: 25,
         ),
-        label: Text(label),
+        label: Text(label, style: GSText.body),
         hintText: hint,
+        hintStyle: GSText.bodySubtle,
       ),
     );
   }

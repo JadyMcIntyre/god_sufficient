@@ -47,9 +47,7 @@ class Button extends StatelessWidget {
                   ),
                 ),
                 onPressed: elevatedBtAction,
-                child: Text(
-                  elevatedBtText,
-                ),
+                child: Text(elevatedBtText, style: GSText.button),
               ),
             ),
             const SizedBox(
@@ -60,15 +58,15 @@ class Button extends StatelessWidget {
               child: Expanded(
                 child: OutlinedButton(
                   style: const ButtonStyle(
-                    foregroundColor: MaterialStatePropertyAll(GSColors.gsOrange),
-                    side: MaterialStatePropertyAll(
+                    foregroundColor: WidgetStatePropertyAll(GSColors.gsOrange),
+                    side: WidgetStatePropertyAll(
                       BorderSide(
                         color: GSColors.gsOrange,
                       ),
                     ),
                   ),
                   onPressed: outlinedBtAction,
-                  child: Text(outlinedBtText ?? ''),
+                  child: Text(outlinedBtText ?? '', style: GSText.button),
                 ),
               ),
             ),

@@ -23,12 +23,12 @@ class LoginView extends GetView<LoginController> {
             children: [
               GSForm(
                 label: 'Email',
-                hint: 'johndoe@gmail.com',
+                hint: AutofillHints.email,
                 iconPath: Icons.mail,
               ),
               GSForm(
                 label: 'Password',
-                hint: '',
+                hint: AutofillHints.password,
                 iconPath: Icons.lock,
               ),
             ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:god_sufficient/config/theme/gs_theme_data.dart';
 import 'package:god_sufficient/core/widgets/genericbody.dart';
 
 import 'button.dart';
@@ -6,8 +7,7 @@ import 'button.dart';
 class SelectedMentor extends StatelessWidget {
   final String name;
   final String expertise;
-  const SelectedMentor(
-      {super.key, required this.name, required this.expertise});
+  const SelectedMentor({super.key, required this.name, required this.expertise});
 
   @override
   Widget build(BuildContext context) {
@@ -36,11 +36,14 @@ class SelectedMentor extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(name),
+                        Text(name, style: GSText.title),
                         const SizedBox(
                           height: 4,
                         ),
-                        Text(expertise),
+                        Text(
+                          expertise,
+                          style: GSText.body,
+                        ),
                       ],
                     ),
                   ],

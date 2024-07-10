@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../../../../config/theme/gs_theme_data.dart';
 import '../controllers/apps_gallery_controller.dart';
 
 class AppsGalleryView extends GetView<AppsGalleryController> {
@@ -39,9 +40,7 @@ class AppsGalleryView extends GetView<AppsGalleryController> {
                       const SizedBox(
                         height: 8,
                       ),
-                      Text(
-                        controller.apps[index].title,
-                      ),
+                      Text(controller.apps[index].title, style: GSText.body),
                     ],
                   ),
                 ),

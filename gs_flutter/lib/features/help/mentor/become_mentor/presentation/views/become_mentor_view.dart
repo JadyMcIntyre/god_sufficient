@@ -35,14 +35,9 @@ class BecomeMentorView extends GetView<BecomeMentorController> {
                     iconPath: Icons.person_2_outlined,
                   ),
                 ),
-                GSForm(
-                  label: 'Phone Number',
-                  hint: '123 456 78',
-                  iconPath: Icons.phone_iphone_outlined,
-                ),
                 Padding(
-                  padding: EdgeInsets.symmetric(
-                    vertical: 16,
+                  padding: EdgeInsets.only(
+                    bottom: 16,
                   ),
                   child: GSForm(
                     label: 'Email',
@@ -51,8 +46,8 @@ class BecomeMentorView extends GetView<BecomeMentorController> {
                   ),
                 ),
                 GSForm(
-                  label: 'Info About You (optional)',
-                  hint: '',
+                  label: 'About You (optional)',
+                  hint: 'Any additional info you\'d like to tell us.',
                   iconPath: Icons.chat_bubble,
                 ),
               ],
