@@ -20,7 +20,7 @@ class FindMentorController extends GetxController {
 
   void onTap(int index) {
     Get.to(
-      SelectedMentor(
+      () => SelectedMentor(
         name: mentors[index].name,
         expertise: mentors[index].expertise,
       ),
