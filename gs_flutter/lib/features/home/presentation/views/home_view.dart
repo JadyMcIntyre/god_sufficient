@@ -9,9 +9,7 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          '(GS)',
-        ),
+        title: SizedBox(height: 100, width: 53, child: Image.asset('assets/gs_logo.png')),
         centerTitle: false,
       ),
       body: Obx(

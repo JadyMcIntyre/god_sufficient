@@ -12,12 +12,14 @@ class LoginView extends GetView<LoginController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('God Sufficient'),
-        centerTitle: true,
-      ),
+      appBar: AppBar(),
       body: GenericBody(
         children: [
+          Image.asset(
+            'assets/gs_logo.png',
+            height: 100,
+          ),
+          const SizedBox(height: 32,),
           const Form(
               child: Column(
             children: [
