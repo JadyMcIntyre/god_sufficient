@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:god_sufficient/config/theme/images.dart';
 
 import '../controllers/home_controller.dart';
 
@@ -9,7 +10,7 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: SizedBox(height: 100, width: 53, child: Image.asset('assets/gs_logo.png')),
+        title: const GSAppBarLogo(),
         centerTitle: false,
       ),
       body: Obx(

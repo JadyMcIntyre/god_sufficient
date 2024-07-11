@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:god_sufficient/config/routes/app_pages.dart';
+import 'package:god_sufficient/config/theme/images.dart';
 import 'package:god_sufficient/core/widgets/genericbody.dart';
 
 import '../../../../core/widgets/button.dart';
@@ -15,11 +16,10 @@ class LoginView extends GetView<LoginController> {
       appBar: AppBar(),
       body: GenericBody(
         children: [
-          Image.asset(
-            'assets/gs_logo.png',
-            height: 100,
+          const Padding(
+            padding: EdgeInsets.only(bottom: 32),
+            child: GSLogo(),
           ),
-          const SizedBox(height: 32,),
           const Form(
               child: Column(
             children: [
