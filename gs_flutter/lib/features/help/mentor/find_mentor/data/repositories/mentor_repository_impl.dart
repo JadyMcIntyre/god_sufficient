@@ -1,6 +1,5 @@
+import 'package:flutter/cupertino.dart';
 import 'package:god_sufficient/features/help/mentor/find_mentor/data/data_sources/remote/mentor_datasource.dart';
-import 'package:god_sufficient/features/help/mentor/find_mentor/data/models/mentors_model.dart';
-import 'package:god_sufficient/features/help/mentor/find_mentor/domain/entities/mentors_entity.dart';
 import 'package:god_sufficient/features/help/mentor/find_mentor/domain/repositories/mentor_repository.dart';
 
 import '../../domain/entities/mentor_entity.dart';
@@ -18,8 +17,13 @@ class MentorRepositoryImpl extends MentorRepository {
   }
 
   @override
-  Future<MentorsEntity?> getMentors() async {
-    MentorsModel? model = await datasource.getMentors();
-    return model;
+  Future<List<MentorModel>?> getMentors() async {
+    try {
+      List<MentorModel>? model = await datasource.getMentors();
+      return model;
+    } catch (e) {
+      debugPrint('Error in repo impl while trying to getMentors: $e');
+      return null;
+    }
   }
 }

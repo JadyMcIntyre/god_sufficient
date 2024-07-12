@@ -1,7 +1,7 @@
 import 'package:god_sufficient/features/help/mentor/find_mentor/domain/repositories/mentor_repository.dart';
 
+import '../../data/models/mentor_model.dart';
 import '../entities/mentor_entity.dart';
-import '../entities/mentors_entity.dart';
 
 class GetMentorUseCase {
   final MentorRepository _repository;
@@ -12,7 +12,7 @@ class GetMentorUseCase {
     return _repository.getMentor();
   }
 
-  Future<MentorsEntity?> getMentors({void params}) {
+  Future<List<MentorModel>?> getMentors({void params}) {
     return _repository.getMentors();
   }
 }

@@ -33,13 +33,12 @@ class FindMentorController extends GetxController {
   Future<void> getMentors() async {
     var response = await useCase.getMentors();
     if (response != null) {
-      var mentors = response.mentors;
-      var x = mentors?[0].name;
-      var y = mentors?.last.name;
+      var x = response.first.name;
+      var y = response.last.name;
 
       print('found first: $x, found last: $y');
     } else {
-      print('null');
+      print('could\'nt fetch mentors.');
     }
   }
 }
