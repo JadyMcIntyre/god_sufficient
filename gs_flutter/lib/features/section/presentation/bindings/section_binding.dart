@@ -8,8 +8,6 @@ class SectionBinding extends Bindings {
 
   @override
   void dependencies() {
-    Get.lazyPut<SectionController>(
-      () => container.resolve<SectionController>(),
-    );
+    Get.lazyPut<SectionController>(() => container.resolve<SectionController>());
   }
 }

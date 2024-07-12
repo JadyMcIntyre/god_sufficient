@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:god_sufficient/core/widgets/gs_form.dart';
 
+import '../../../../../../core/widgets/body.dart';
 import '../../../../../../core/widgets/button.dart';
-import '../../../../../../core/widgets/genericbody.dart';
 import '../controllers/become_mentor_controller.dart';
 
 class BecomeMentorView extends GetView<BecomeMentorController> {
@@ -11,11 +11,8 @@ class BecomeMentorView extends GetView<BecomeMentorController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Become Mentor'),
-        centerTitle: true,
-      ),
-      body: const GenericBody(
+      appBar: AppBar(title: const Text('Become Mentor'), centerTitle: true),
+      body: const Body(
         children: [
           Form(
             child: Column(
@@ -26,9 +23,7 @@ class BecomeMentorView extends GetView<BecomeMentorController> {
                   iconPath: Icons.person,
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(
-                    vertical: 16,
-                  ),
+                  padding: EdgeInsets.symmetric(vertical: 16),
                   child: GSForm(
                     label: 'Last Name',
                     hint: 'Doe',
@@ -36,9 +31,7 @@ class BecomeMentorView extends GetView<BecomeMentorController> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(
-                    bottom: 16,
-                  ),
+                  padding: EdgeInsets.only(bottom: 16),
                   child: GSForm(
                     label: 'Email',
                     hint: 'me@example.com',

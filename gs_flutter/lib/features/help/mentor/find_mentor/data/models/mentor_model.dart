@@ -12,11 +12,6 @@ class MentorModel extends MentorEntity {
 
 extension ToEntity on MentorModel {
   MentorEntity toEntity() {
-    return MentorEntity(
-      id: id,
-      name: name,
-      expertise: expertise,
-      description: description,
-    );
+    return MentorEntity(id: id, name: name, expertise: expertise, description: description);
   }
 }

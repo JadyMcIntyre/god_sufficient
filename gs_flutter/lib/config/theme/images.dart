@@ -9,11 +9,7 @@ class GSLogo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Image.asset(
-      GSImageData.logo,
-      height: 100,
-      width: width,
-    );
+    return Image.asset(GSImageData.logo, height: 100, width: width);
   }
 }
 
@@ -22,8 +18,6 @@ class GSAppBarLogo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const GSLogo(
-      width: 53,
-    );
+    return const GSLogo(width: 53);
   }
 }

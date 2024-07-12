@@ -10,21 +10,11 @@ class FindMentorController extends GetxController {
   FindMentorController({required this.useCase});
 
   List<MentorGalleryItem> mentors = [
-    MentorGalleryItem(
-      'Ivan',
-      'Got saved from 20 year drug addiction',
-      'Addiction',
-      'imagePath',
-    ),
+    MentorGalleryItem('Ivan', 'Got saved from 20 year drug addiction', 'Addiction', 'imagePath'),
   ];
 
   void onTap(int index) {
-    Get.to(
-      () => SelectedMentor(
-        name: mentors[index].name,
-        expertise: mentors[index].expertise,
-      ),
-    );
+    Get.to(() => SelectedMentor(name: mentors[index].name, expertise: mentors[index].expertise));
   }
 
   void getMentors() async {

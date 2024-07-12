@@ -8,8 +8,6 @@ class HomeBinding extends Bindings {
 
   @override
   void dependencies() {
-    Get.lazyPut<HomeController>(
-      () => container.resolve<HomeController>(),
-    );
+    Get.lazyPut<HomeController>(() => container.resolve<HomeController>());
   }
 }

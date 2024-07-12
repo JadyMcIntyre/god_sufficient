@@ -8,8 +8,6 @@ class FindMentorBinding extends Bindings {
 
   @override
   void dependencies() {
-    Get.lazyPut<FindMentorController>(
-      () => container.resolve<FindMentorController>(),
-    );
+    Get.lazyPut<FindMentorController>(() => container.resolve<FindMentorController>());
   }
 }

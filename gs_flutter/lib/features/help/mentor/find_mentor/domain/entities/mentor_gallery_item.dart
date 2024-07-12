@@ -3,10 +3,6 @@ class MentorGalleryItem {
   final String testimony;
   final String expertise;
   final String imagePath;
-  MentorGalleryItem(
-    this.name,
-    this.testimony,
-    this.expertise,
-    this.imagePath,
-  );
+
+  MentorGalleryItem(this.name, this.testimony, this.expertise, this.imagePath);
 }

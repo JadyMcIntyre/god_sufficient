@@ -4,7 +4,9 @@ import 'package:god_sufficient/features/help/mentor/find_mentor/domain/repositor
 
 class GetMentorUseCase implements UseCase<MentorsEntity?, void> {
   final MentorRepository _repository;
+
   GetMentorUseCase(this._repository);
+
   @override
   Future<MentorsEntity?> call({void params}) {
     return _repository.getMentors();

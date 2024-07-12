@@ -8,8 +8,6 @@ class AppsGalleryBinding extends Bindings {
 
   @override
   void dependencies() {
-    Get.lazyPut<AppsGalleryController>(
-      () => container.resolve<AppsGalleryController>(),
-    );
+    Get.lazyPut<AppsGalleryController>(() => container.resolve<AppsGalleryController>());
   }
 }

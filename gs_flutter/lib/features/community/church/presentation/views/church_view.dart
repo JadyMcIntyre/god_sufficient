@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:god_sufficient/core/widgets/button.dart';
 
-import '../../../../../core/widgets/genericbody.dart';
+import '../../../../../core/widgets/body.dart';
 import '../controllers/church_controller.dart';
 
 class ChurchView extends GetView<ChurchController> {
@@ -10,13 +10,8 @@ class ChurchView extends GetView<ChurchController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Church'),
-        centerTitle: true,
-      ),
-      body: const GenericBody(
-        children: [],
-      ),
+      appBar: AppBar(title: const Text('Church'), centerTitle: true),
+      body: const Body(children: []),
       bottomNavigationBar: Button.oneButton(
         elevatedBtText: 'Find',
         elevatedBtAction: () {},
