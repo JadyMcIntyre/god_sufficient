@@ -17,14 +17,27 @@ class FindMentorController extends GetxController {
     // Get.to(() => SelectedMentor(name: mentors[index].name, expertise: mentors[index].expertise));
   }
 
-  Future<void> getMentors() async {
-    var response = await useCase.call();
+  Future<void> getMentor() async {
+    var response = await useCase.getMentor();
     if (response != null) {
       var id = response?.id.toString();
       var name = response?.name;
       var expertise = response?.expertise;
       var description = response?.description;
       print('found: id: $id, name: $name, expertise: $expertise, description: $description');
+    } else {
+      print('null');
+    }
+  }
+
+  Future<void> getMentors() async {
+    var response = await useCase.getMentors();
+    if (response != null) {
+      var mentors = response.mentors;
+      var x = mentors?[0].name;
+      var y = mentors?.last.name;
+
+      print('found first: $x, found last: $y');
     } else {
       print('null');
     }
