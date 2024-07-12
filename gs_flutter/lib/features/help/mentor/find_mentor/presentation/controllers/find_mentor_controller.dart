@@ -1,7 +1,6 @@
 import 'package:get/get.dart';
 import 'package:god_sufficient/features/help/mentor/find_mentor/domain/entities/mentor_gallery_item.dart';
 
-import '../../../../../../core/widgets/selected_mentor.dart';
 import '../../domain/use_cases/get_mentor.dart';
 
 class FindMentorController extends GetxController {
@@ -13,23 +12,21 @@ class FindMentorController extends GetxController {
     MentorGalleryItem('Ivan', 'Got saved from 20 year drug addiction', 'Addiction', 'imagePath'),
   ];
 
-  void onTap(int index) {
-    Get.to(() => SelectedMentor(name: mentors[index].name, expertise: mentors[index].expertise));
+  void onTap(int index) async {
+    await getMentors();
+    // Get.to(() => SelectedMentor(name: mentors[index].name, expertise: mentors[index].expertise));
   }
 
-  void getMentors() async {
+  Future<void> getMentors() async {
     var response = await useCase.call();
-    var x = response?.mentors;
-    print(x);
-    var y = x?.first;
-    print(y);
-    var z = y?.name;
-    print(z);
-    if (response?.mentors?.isNotEmpty ?? false) {
-      var name = response!.mentors!.first.name;
-      print(name);
+    if (response != null) {
+      var id = response?.id.toString();
+      var name = response?.name;
+      var expertise = response?.expertise;
+      var description = response?.description;
+      print('found: id: $id, name: $name, expertise: $expertise, description: $description');
     } else {
-      print('fail');
+      print('null');
     }
   }
 }

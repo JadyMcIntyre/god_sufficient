@@ -9,9 +9,3 @@ class MentorModel extends MentorEntity {
 
   factory MentorModel.fromJson(Map<String, dynamic> json) => _$MentorModelFromJson(json);
 }
-
-extension ToEntity on MentorModel {
-  MentorEntity toEntity() {
-    return MentorEntity(id: id, name: name, expertise: expertise, description: description);
-  }
-}
