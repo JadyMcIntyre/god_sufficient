@@ -28,6 +28,11 @@ class AppPages {
 
   static final routes = [
     GetPage(
+      name: _Paths.login,
+      page: () => const LoginView(),
+      binding: LoginBinding(),
+    ),
+    GetPage(
       name: _Paths.home,
       page: () => const HomeView(),
       binding: HomeBinding(),
@@ -36,6 +41,16 @@ class AppPages {
       name: _Paths.help,
       page: () => const GetHelpView(),
       binding: GetHelpBinding(),
+    ),
+    GetPage(
+      name: _Paths.becomeMentor,
+      page: () => const BecomeMentorView(),
+      binding: BecomeMentorBinding(),
+    ),
+    GetPage(
+      name: _Paths.findMentor,
+      page: () => const FindMentorView(),
+      binding: FindMentorBinding(),
     ),
     GetPage(
       name: _Paths.church,
@@ -56,21 +71,6 @@ class AppPages {
       name: _Paths.learn,
       page: () => const LearnView(),
       binding: LearnBinding(),
-    ),
-    GetPage(
-      name: _Paths.becomeMentor,
-      page: () => const BecomeMentorView(),
-      binding: BecomeMentorBinding(),
-    ),
-    GetPage(
-      name: _Paths.findMentor,
-      page: () => const FindMentorView(),
-      binding: FindMentorBinding(),
-    ),
-    GetPage(
-      name: _Paths.login,
-      page: () => const LoginView(),
-      binding: LoginBinding(),
     ),
   ];
 }

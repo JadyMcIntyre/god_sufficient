@@ -8,6 +8,7 @@ class Button extends StatelessWidget {
   final VoidCallback elevatedBtAction;
   final VoidCallback? outlinedBtAction;
   final bool hasPadding;
+
   const Button.oneButton({
     super.key,
     required this.elevatedBtText,
@@ -30,9 +31,7 @@ class Button extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: EdgeInsets.all(
-          hasPadding ? 16 : 0,
-        ),
+        padding: EdgeInsets.all(hasPadding ? 16 : 0),
         child: Row(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -40,30 +39,22 @@ class Button extends StatelessWidget {
             Expanded(
               child: ElevatedButton(
                 style: const ButtonStyle(
-                  backgroundColor: WidgetStatePropertyAll(GSColors.gsTeal),
+                  backgroundColor: WidgetStatePropertyAll(GSColors.teal),
                   foregroundColor: WidgetStatePropertyAll(Colors.white),
-                  shadowColor: WidgetStatePropertyAll(
-                    GSColors.gsOffWhite,
-                  ),
+                  shadowColor: WidgetStatePropertyAll(GSColors.offWhite),
                 ),
                 onPressed: elevatedBtAction,
                 child: Text(elevatedBtText, style: GSText.button),
               ),
             ),
-            const SizedBox(
-              width: 8,
-            ),
+            const SizedBox(width: 8),
             Visibility(
               visible: !hasOneButton,
               child: Expanded(
                 child: OutlinedButton(
                   style: const ButtonStyle(
-                    foregroundColor: WidgetStatePropertyAll(GSColors.gsOrange),
-                    side: WidgetStatePropertyAll(
-                      BorderSide(
-                        color: GSColors.gsOrange,
-                      ),
-                    ),
+                    foregroundColor: WidgetStatePropertyAll(GSColors.orange),
+                    side: WidgetStatePropertyAll(BorderSide(color: GSColors.orange)),
                   ),
                   onPressed: outlinedBtAction,
                   child: Text(outlinedBtText ?? '', style: GSText.button),

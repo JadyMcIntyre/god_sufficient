@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:god_sufficient/config/theme/gs_theme_data.dart';
-import 'package:god_sufficient/core/widgets/genericbody.dart';
+import 'package:god_sufficient/core/widgets/body.dart';
 
 import 'button.dart';
 
 class SelectedMentor extends StatelessWidget {
   final String name;
   final String expertise;
+
   const SelectedMentor({super.key, required this.name, required this.expertise});
 
   @override
@@ -17,7 +18,7 @@ class SelectedMentor extends StatelessWidget {
       ),
       body: SafeArea(
         child: SingleChildScrollView(
-          child: GenericBody(children: [
+          child: Body(children: [
             Card(
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -25,25 +26,15 @@ class SelectedMentor extends StatelessWidget {
                   children: [
                     const CircleAvatar(
                       radius: 40,
-                      child: Icon(
-                        Icons.face_2,
-                        size: 30,
-                      ),
+                      child: Icon(Icons.face_2, size: 30),
                     ),
-                    const SizedBox(
-                      width: 16,
-                    ),
+                    const SizedBox(width: 16),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(name, style: GSText.title),
-                        const SizedBox(
-                          height: 4,
-                        ),
-                        Text(
-                          expertise,
-                          style: GSText.body,
-                        ),
+                        const SizedBox(height: 4),
+                        Text(expertise, style: GSText.body),
                       ],
                     ),
                   ],

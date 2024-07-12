@@ -14,8 +14,6 @@ class MentorsModel extends MentorsEntity {
 
 extension ToEntity on MentorsModel {
   MentorsEntity toEntity() {
-    return MentorsEntity(
-      mentors: mentors,
-    );
+    return MentorsEntity(mentors: mentors);
   }
 }

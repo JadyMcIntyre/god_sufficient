@@ -16,11 +16,7 @@ class HomeController extends GetxController {
       'Mentor',
       'Connect with individuals who\'ve overcome struggles with God\'s help. Share your journey, receive guidance, or become a mentor to support others.',
       () => Get.toNamed(Routes.mentor),
-      Button.oneButton(
-        elevatedBtText: 'Find Help',
-        elevatedBtAction: () => Get.toNamed(Routes.help),
-        hasPadding: false,
-      ),
+      Button.oneButton(elevatedBtText: 'Find Help', elevatedBtAction: () => Get.toNamed(Routes.help), hasPadding: false),
       Button.twoButtons(
         elevatedBtText: 'Find',
         outlinedBtText: 'Become',
@@ -37,11 +33,7 @@ class HomeController extends GetxController {
       'Volunteer',
       'Participate in or advertise community and church events, big or small, to volunteer and make an impact.',
       () => Get.toNamed(Routes.volunteer),
-      Button.oneButton(
-        elevatedBtText: 'Churches Near You',
-        elevatedBtAction: () => Get.toNamed(Routes.church),
-        hasPadding: false,
-      ),
+      Button.oneButton(elevatedBtText: 'Churches Near You', elevatedBtAction: () => Get.toNamed(Routes.church), hasPadding: false),
       Button.twoButtons(
         elevatedBtText: 'Join',
         outlinedBtText: 'Host',
@@ -58,16 +50,8 @@ class HomeController extends GetxController {
       'Learn',
       'Access free Christian resources that align with Biblical teachings, available in formats to read, watch, and listen, to nurture your faith and understanding.',
       () => Get.toNamed(Routes.learn),
-      Button.oneButton(
-        elevatedBtText: 'Explore',
-        elevatedBtAction: () => Get.toNamed(Routes.appsGallery),
-        hasPadding: false,
-      ),
-      Button.oneButton(
-        elevatedBtText: 'Explore',
-        elevatedBtAction: () => Get.toNamed(Routes.learn),
-        hasPadding: false,
-      ),
+      Button.oneButton(elevatedBtText: 'Explore', elevatedBtAction: () => Get.toNamed(Routes.appsGallery), hasPadding: false),
+      Button.oneButton(elevatedBtText: 'Explore', elevatedBtAction: () => Get.toNamed(Routes.learn), hasPadding: false),
     ),
   ];
 

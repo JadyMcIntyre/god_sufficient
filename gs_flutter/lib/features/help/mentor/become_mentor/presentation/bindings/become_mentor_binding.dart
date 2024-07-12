@@ -8,8 +8,6 @@ class BecomeMentorBinding extends Bindings {
 
   @override
   void dependencies() {
-    Get.lazyPut<BecomeMentorController>(
-      () => container.resolve<BecomeMentorController>(),
-    );
+    Get.lazyPut<BecomeMentorController>(() => container.resolve<BecomeMentorController>());
   }
 }

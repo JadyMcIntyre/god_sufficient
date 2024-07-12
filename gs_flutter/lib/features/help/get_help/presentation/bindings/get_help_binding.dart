@@ -8,8 +8,6 @@ class GetHelpBinding extends Bindings {
 
   @override
   void dependencies() {
-    Get.lazyPut<GetHelpController>(
-      () => container.resolve<GetHelpController>(),
-    );
+    Get.lazyPut<GetHelpController>(() => container.resolve<GetHelpController>());
   }
 }

@@ -8,8 +8,6 @@ class ChurchBinding extends Bindings {
 
   @override
   void dependencies() {
-    Get.lazyPut<ChurchController>(
-      () => container.resolve<ChurchController>(),
-    );
+    Get.lazyPut<ChurchController>(() => container.resolve<ChurchController>());
   }
 }

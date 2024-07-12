@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../../core/widgets/genericbody.dart';
+import '../../../../core/widgets/body.dart';
 import '../../../../core/widgets/section_card_widget.dart';
 import '../controllers/section_controller.dart';
 
@@ -15,6 +15,7 @@ class SectionView extends GetView<SectionController> {
   final VoidCallback featureTwoOnTap;
   final Widget featureOneButton;
   final Widget featureTwoButton;
+
   const SectionView(
     this.title,
     this.featureOneTitle,
@@ -27,29 +28,16 @@ class SectionView extends GetView<SectionController> {
     this.featureTwoButton, {
     super.key,
   });
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text(title),
-      //   centerTitle: true,
-      // ),
       body: SingleChildScrollView(
-        child: GenericBody(
+        child: Body(
           children: [
-            SectionCardWidget(
-              title: featureOneTitle,
-              body: featureOneBody,
-              button: featureOneButton,
-            ),
-            const SizedBox(
-              height: 16,
-            ),
-            SectionCardWidget(
-              title: featureTwoTitle,
-              body: featureTwoBody,
-              button: featureTwoButton,
-            ),
+            SectionCard(title: featureOneTitle, body: featureOneBody, button: featureOneButton),
+            const SizedBox(height: 16),
+            SectionCard(title: featureTwoTitle, body: featureTwoBody, button: featureTwoButton),
           ],
         ),
       ),

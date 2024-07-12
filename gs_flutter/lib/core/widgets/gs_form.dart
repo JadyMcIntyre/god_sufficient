@@ -17,10 +17,7 @@ class GSForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       decoration: InputDecoration(
-        icon: Icon(
-          iconPath,
-          size: 25,
-        ),
+        icon: Icon(iconPath, size: 25),
         label: Text(label, style: GSText.body),
         hintText: hint,
         hintStyle: GSText.bodySubtle,

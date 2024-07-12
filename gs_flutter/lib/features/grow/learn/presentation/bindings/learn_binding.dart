@@ -8,8 +8,6 @@ class LearnBinding extends Bindings {
 
   @override
   void dependencies() {
-    Get.lazyPut<LearnController>(
-      () => container.resolve<LearnController>(),
-    );
+    Get.lazyPut<LearnController>(() => container.resolve<LearnController>());
   }
 }
