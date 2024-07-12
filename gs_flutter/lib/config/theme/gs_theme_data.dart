@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class GSColors {
-  static const Color gsTeal = Colors.teal;
-  static const Color gsOrange = Color.fromRGBO(255, 99, 51, 1);
-  static const Color gsOffWhite = Color.fromRGBO(255, 255, 255, 0.2);
+  static const Color teal = Colors.teal;
+  static const Color orange = Color.fromRGBO(255, 99, 51, 1);
+  static const Color offWhite = Color.fromRGBO(255, 255, 255, 0.2);
 }
 
 class GSText {
@@ -33,7 +33,7 @@ class GSText {
   static TextStyle button = GoogleFonts.roboto(
     textStyle: const TextStyle(
       fontWeight: FontWeight.w600,
-      fontSize: 17,
+      fontSize: 16,
     ),
   );
 }

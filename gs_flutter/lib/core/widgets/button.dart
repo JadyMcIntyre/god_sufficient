@@ -40,10 +40,10 @@ class Button extends StatelessWidget {
             Expanded(
               child: ElevatedButton(
                 style: const ButtonStyle(
-                  backgroundColor: WidgetStatePropertyAll(GSColors.gsTeal),
+                  backgroundColor: WidgetStatePropertyAll(GSColors.teal),
                   foregroundColor: WidgetStatePropertyAll(Colors.white),
                   shadowColor: WidgetStatePropertyAll(
-                    GSColors.gsOffWhite,
+                    GSColors.offWhite,
                   ),
                 ),
                 onPressed: elevatedBtAction,
@@ -58,10 +58,10 @@ class Button extends StatelessWidget {
               child: Expanded(
                 child: OutlinedButton(
                   style: const ButtonStyle(
-                    foregroundColor: WidgetStatePropertyAll(GSColors.gsOrange),
+                    foregroundColor: WidgetStatePropertyAll(GSColors.orange),
                     side: WidgetStatePropertyAll(
                       BorderSide(
-                        color: GSColors.gsOrange,
+                        color: GSColors.orange,
                       ),
                     ),
                   ),

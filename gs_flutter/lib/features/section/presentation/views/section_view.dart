@@ -30,10 +30,6 @@ class SectionView extends GetView<SectionController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text(title),
-      //   centerTitle: true,
-      // ),
       body: SingleChildScrollView(
         child: GenericBody(
           children: [

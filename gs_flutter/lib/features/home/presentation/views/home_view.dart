@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:god_sufficient/config/theme/gs_theme_data.dart';
 import 'package:god_sufficient/config/theme/images.dart';
 
 import '../controllers/home_controller.dart';
@@ -29,17 +30,30 @@ class HomeView extends GetView<HomeController> {
                 Icons.help,
               ),
               label: 'Help',
+              activeIcon: Icon(
+                Icons.help,
+                color: GSColors.teal,
+              ),
             ),
             BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.people,
-                ),
-                label: 'Community'),
+              icon: Icon(
+                Icons.people,
+              ),
+              label: 'Community',
+              activeIcon: Icon(
+                Icons.people,
+                color: GSColors.teal,
+              ),
+            ),
             BottomNavigationBarItem(
               icon: Icon(
                 Icons.arrow_circle_up_sharp,
               ),
               label: 'Grow',
+              activeIcon: Icon(
+                Icons.arrow_circle_up_sharp,
+                color: GSColors.teal,
+              ),
             ),
           ],
         ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:god_sufficient/config/theme/gs_theme_data.dart';
+import 'package:god_sufficient/core/widgets/toggle_description.dart';
 
 class SectionCardWidget extends StatelessWidget {
   const SectionCardWidget({
@@ -41,21 +42,17 @@ class SectionCardWidget extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 16,
+              height: 5,
             ),
-            Text(
-              title,
-              style: GSText.title,
-            ),
-            const SizedBox(
-              height: 8,
-            ),
-            Text(
-              body,
-              style: GSText.body,
-            ),
-            const SizedBox(
-              height: 16,
+            ToggleDescription(
+              title: Text(
+                title,
+                style: GSText.title,
+              ),
+              description: Text(
+                body,
+                style: GSText.body,
+              ),
             ),
             button,
           ],
