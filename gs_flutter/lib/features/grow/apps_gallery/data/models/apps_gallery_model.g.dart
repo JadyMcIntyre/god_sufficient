@@ -1,12 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'app_model.dart';
+part of 'apps_gallery_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-AppModel _$AppModelFromJson(Map<String, dynamic> json) => AppModel(
+AppsGalleryModel _$AppsGalleryModelFromJson(Map<String, dynamic> json) =>
+    AppsGalleryModel(
       id: (json['id'] as num).toInt(),
       name: json['name'] as String,
     );
