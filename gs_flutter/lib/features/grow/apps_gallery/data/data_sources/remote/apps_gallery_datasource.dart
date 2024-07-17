@@ -4,10 +4,10 @@ import 'package:god_sufficient/core/constants/constants.dart';
 import 'package:god_sufficient/core/resources/gs_api_provider.dart';
 import 'package:god_sufficient/features/grow/apps_gallery/data/models/apps_gallery_model.dart';
 
-class AppsDataSource {
+class AppsGalleryDataSource {
   final GSApiProvider apiProvider;
 
-  AppsDataSource({required this.apiProvider});
+  AppsGalleryDataSource({required this.apiProvider});
 
   Future<AppsGalleryModel?> getApp() async {
     try {

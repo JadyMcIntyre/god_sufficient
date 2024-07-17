@@ -1,13 +1,13 @@
 import 'package:flutter/cupertino.dart';
-import 'package:god_sufficient/features/grow/apps_gallery/data/data_sources/remote/apps_datasource.dart';
+import 'package:god_sufficient/features/grow/apps_gallery/data/data_sources/remote/apps_gallery_datasource.dart';
 import 'package:god_sufficient/features/grow/apps_gallery/data/models/apps_gallery_model.dart';
 import 'package:god_sufficient/features/grow/apps_gallery/domain/entities/app_entity.dart';
 import 'package:god_sufficient/features/grow/apps_gallery/domain/repos/apps_repo.dart';
 
-class AppsRepoImpl extends AppsRepo {
-  final AppsDataSource datasource;
+class AppsGalleryRepoImpl extends AppsRepo {
+  final AppsGalleryDataSource datasource;
 
-  AppsRepoImpl(this.datasource);
+  AppsGalleryRepoImpl(this.datasource);
 
   @override
   Future<AppEntity?> getApp() async {

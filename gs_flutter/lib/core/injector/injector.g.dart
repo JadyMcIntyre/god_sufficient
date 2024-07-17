@@ -23,13 +23,11 @@ class _$Injector extends Injector {
       ..registerFactory((c) => LoginController())
       ..registerFactory((c) => ChurchController())
       ..registerFactory((c) => VolunteerController())
-      ..registerFactory(
-          (c) => AppsGalleryController(useCase: c<GetAppUseCase>()))
+      ..registerFactory((c) => AppsGalleryController(useCase: c<GetAppUseCase>()))
       ..registerFactory((c) => LearnController())
       ..registerFactory((c) => GetHelpController())
       ..registerFactory((c) => BecomeMentorController())
-      ..registerFactory(
-          (c) => FindMentorController(useCase: c<GetMentorUseCase>()))
+      ..registerFactory((c) => FindMentorController(useCase: c<GetMentorUseCase>()))
       ..registerFactory((c) => SectionController());
   }
 
@@ -37,19 +35,16 @@ class _$Injector extends Injector {
   void _configureRepositories() {
     final KiwiContainer container = KiwiContainer();
     container
-      ..registerSingleton<MentorRepository>(
-          (c) => MentorRepositoryImpl(c<MentorDatasource>()))
-      ..registerSingleton<AppsRepo>((c) => AppsRepoImpl(c<AppsDataSource>()));
+      ..registerSingleton<MentorRepository>((c) => MentorRepositoryImpl(c<MentorDatasource>()))
+      ..registerSingleton<AppsRepo>((c) => AppsGalleryRepoImpl(c<AppsGalleryDataSource>()));
   }
 
   @override
   void _configureRemoteDataSources() {
     final KiwiContainer container = KiwiContainer();
     container
-      ..registerSingleton(
-          (c) => MentorDatasource(apiProvider: c<GSApiProvider>()))
-      ..registerSingleton(
-          (c) => AppsDataSource(apiProvider: c<GSApiProvider>()));
+      ..registerSingleton((c) => MentorDatasource(apiProvider: c<GSApiProvider>()))
+      ..registerSingleton((c) => AppsGalleryDataSource(apiProvider: c<GSApiProvider>()));
   }
 
   @override
