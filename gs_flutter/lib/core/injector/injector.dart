@@ -1,6 +1,10 @@
 import 'package:god_sufficient/core/resources/gs_api_provider.dart';
 import 'package:god_sufficient/features/community/church/presentation/controllers/church_controller.dart';
 import 'package:god_sufficient/features/community/volunteer/presentation/controllers/volunteer_controller.dart';
+import 'package:god_sufficient/features/grow/app/apps_gallery/data/data_sources/remote/apps_datasource.dart';
+import 'package:god_sufficient/features/grow/app/apps_gallery/data/repos/apps_repo_impl.dart';
+import 'package:god_sufficient/features/grow/app/apps_gallery/domain/repos/apps_repo.dart';
+import 'package:god_sufficient/features/grow/app/apps_gallery/domain/use_cases/get_app.dart';
 import 'package:god_sufficient/features/grow/app/apps_gallery/presentation/controllers/apps_gallery_controller.dart';
 import 'package:god_sufficient/features/grow/learn/presentation/controllers/learn_controller.dart';
 import 'package:god_sufficient/features/help/get_help/presentation/controllers/get_help_controller.dart';
@@ -26,6 +30,7 @@ abstract class Injector {
   }
 
   @Register.singleton(GetMentorUseCase)
+  @Register.singleton(GetAppUseCase)
   void _configureUseCases();
 
   @Register.factory(HomeController)
@@ -41,9 +46,11 @@ abstract class Injector {
   void _configureControllers();
 
   @Register.singleton(MentorRepository, from: MentorRepositoryImpl)
+  @Register.singleton(AppsRepo, from: AppsRepoImpl)
   void _configureRepositories();
 
   @Register.singleton(MentorDatasource)
+  @Register.singleton(AppsDataSource)
   void _configureRemoteDataSources();
 
   @Register.singleton(GSApiProvider)
