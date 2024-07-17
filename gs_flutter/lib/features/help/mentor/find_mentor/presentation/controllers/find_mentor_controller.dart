@@ -1,44 +1,41 @@
 import 'package:get/get.dart';
 import 'package:god_sufficient/features/help/mentor/find_mentor/domain/entities/mentor_gallery_item.dart';
 
+import '../../../../../../core/widgets/selected_mentor.dart';
 import '../../domain/use_cases/get_mentor.dart';
 
-class FindMentorController extends GetxController {
+class FindMentorController extends GetxController with StateMixin {
   final GetMentorUseCase useCase;
 
   FindMentorController({required this.useCase});
 
-  List<MentorGalleryItem> mentors = [
-    MentorGalleryItem('Ivan', 'Got saved from 20 year drug addiction', 'Addiction', 'imagePath'),
-  ];
+  List<MentorGalleryItem> mentors = [];
 
-  void onTap(int index) async {
-    await getMentors();
-    // Get.to(() => SelectedMentor(name: mentors[index].name, expertise: mentors[index].expertise));
+  @override
+  void onInit() async {
+    super.onInit();
+    change(null, status: RxStatus.loading());
   }
 
-  Future<void> getMentor() async {
-    var response = await useCase.getMentor();
-    if (response != null) {
-      var id = response?.id.toString();
-      var name = response?.name;
-      var expertise = response?.expertise;
-      var description = response?.description;
-      print('found: id: $id, name: $name, expertise: $expertise, description: $description');
-    } else {
-      print('null');
-    }
+  @override
+  void onReady() async {
+    super.onReady();
+    await getMentors();
+  }
+
+  void onTap(int index) async {
+    Get.to(() => SelectedMentor(name: mentors[index].name, expertise: mentors[index].expertise));
   }
 
   Future<void> getMentors() async {
     var response = await useCase.getMentors();
     if (response != null) {
-      var x = response.first.name;
-      var y = response.last.name;
-
-      print('found first: $x, found last: $y');
+      for (var mentor in response) {
+        mentors.add(MentorGalleryItem(mentor.name, '', mentor.expertise, 'imagePath'));
+      }
+      change(null, status: RxStatus.success());
     } else {
-      print('could\'nt fetch mentors.');
+      change(null, status: RxStatus.error());
     }
   }
 }

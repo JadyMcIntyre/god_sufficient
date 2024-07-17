@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:god_sufficient/core/constants/constants.dart';
@@ -26,10 +24,11 @@ class MentorDatasource {
 
   Future<List<MentorModel>?> getMentors() async {
     try {
-      final response = await apiProvider.getAsync(getMentorsEndpoint);
+      final Response<dynamic> response = await apiProvider.getAsync(getMentorsEndpoint);
       if (response.statusCode == 200) {
-        List<dynamic> jsonResponse = json.decode(response.data);
-        return jsonResponse.map((mentor) => MentorModel.fromJson(mentor)).toList();
+        List<dynamic> jsonData = response.data;
+        List<MentorModel> mentors = jsonData.map((json) => MentorModel.fromJson(json)).toList();
+        return mentors;
       } else {
         return null;
       }

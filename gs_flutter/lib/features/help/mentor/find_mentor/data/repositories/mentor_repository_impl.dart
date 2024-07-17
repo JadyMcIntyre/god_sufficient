@@ -19,8 +19,7 @@ class MentorRepositoryImpl extends MentorRepository {
   @override
   Future<List<MentorModel>?> getMentors() async {
     try {
-      List<MentorModel>? model = await datasource.getMentors();
-      return model;
+      return await datasource.getMentors();
     } catch (e) {
       debugPrint('Error in repo impl while trying to getMentors: $e');
       return null;
