@@ -12,7 +12,7 @@ class _$Injector extends Injector {
     final KiwiContainer container = KiwiContainer();
     container
       ..registerSingleton((c) => GetMentorUseCase(c<MentorRepository>()))
-      ..registerSingleton((c) => GetAppUseCase(c<AppGalleryRepo>()));
+      ..registerSingleton((c) => GetAppUseCase(c<AppsGalleryRepo>()));
   }
 
   @override
@@ -36,7 +36,7 @@ class _$Injector extends Injector {
     final KiwiContainer container = KiwiContainer();
     container
       ..registerSingleton<MentorRepository>((c) => MentorRepositoryImpl(c<MentorDatasource>()))
-      ..registerSingleton<AppGalleryRepo>((c) => AppsGalleryRepoImpl(c<AppsGalleryDataSource>()));
+      ..registerSingleton<AppsGalleryRepo>((c) => AppsGalleryRepoImpl(c<AppsGalleryDataSource>()));
   }
 
   @override
