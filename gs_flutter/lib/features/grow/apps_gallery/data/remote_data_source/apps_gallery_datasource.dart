@@ -2,18 +2,18 @@ import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:god_sufficient/core/constants/constants.dart';
 import 'package:god_sufficient/core/resources/gs_api_provider.dart';
-import 'package:god_sufficient/features/grow/apps_gallery/data/models/app_model.dart';
+import 'package:god_sufficient/features/grow/apps_gallery/data/models/apps_gallery_model.dart';
 
-class AppsDataSource {
+class AppsGalleryDataSource {
   final GSApiProvider apiProvider;
 
-  AppsDataSource({required this.apiProvider});
+  AppsGalleryDataSource({required this.apiProvider});
 
-  Future<AppModel?> getApp() async {
+  Future<AppsGalleryModel?> getApp() async {
     try {
       final response = await apiProvider.getAsync(getAppEndpoint);
       if (response.statusCode == 200) {
-        return (AppModel.fromJson(response.data));
+        return (AppsGalleryModel.fromJson(response.data));
       } else {
         return null;
       }
@@ -22,12 +22,12 @@ class AppsDataSource {
     }
   }
 
-  Future<List<AppModel>?> getApps() async {
+  Future<List<AppsGalleryModel>?> getApps() async {
     try {
       final Response<dynamic> response = await apiProvider.getAsync(getAppsEndpoint);
       if (response.statusCode == 200) {
         List<dynamic> jsonData = response.data;
-        List<AppModel> mentors = jsonData.map((json) => AppModel.fromJson(json)).toList();
+        List<AppsGalleryModel> mentors = jsonData.map((json) => AppsGalleryModel.fromJson(json)).toList();
         return mentors;
       } else {
         return null;

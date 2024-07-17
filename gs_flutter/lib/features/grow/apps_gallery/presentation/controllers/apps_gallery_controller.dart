@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:god_sufficient/features/grow/apps_gallery/domain/use_cases/get_app.dart';
+import 'package:god_sufficient/features/grow/apps_gallery/domain/use_cases/get_app_gallery.dart';
 
 import '../../domain/entities/apps_gallery_item.dart';
 

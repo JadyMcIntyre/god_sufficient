@@ -1,9 +1,8 @@
 import 'package:god_sufficient/core/resources/gs_api_provider.dart';
 import 'package:god_sufficient/features/community/church/presentation/controllers/church_controller.dart';
 import 'package:god_sufficient/features/community/volunteer/presentation/controllers/volunteer_controller.dart';
-import 'package:god_sufficient/features/grow/apps_gallery/data/data_sources/remote/apps_datasource.dart';
-import 'package:god_sufficient/features/grow/apps_gallery/data/repos/apps_repo_impl.dart';
-import 'package:god_sufficient/features/grow/apps_gallery/domain/repos/apps_repo.dart';
+import 'package:god_sufficient/features/grow/apps_gallery/data/repos/apps_gallery_repo_impl.dart';
+import 'package:god_sufficient/features/grow/apps_gallery/domain/repos/apps_gallery_repo.dart';
 import 'package:god_sufficient/features/grow/apps_gallery/presentation/controllers/apps_gallery_controller.dart';
 import 'package:god_sufficient/features/grow/learn/presentation/controllers/learn_controller.dart';
 import 'package:god_sufficient/features/help/get_help/presentation/controllers/get_help_controller.dart';
@@ -12,7 +11,8 @@ import 'package:god_sufficient/features/login/presentation/controllers/login_con
 import 'package:god_sufficient/features/section/presentation/controllers/section_controller.dart';
 import 'package:kiwi/kiwi.dart';
 
-import '../../features/grow/apps_gallery/domain/use_cases/get_app.dart';
+import '../../features/grow/apps_gallery/data/remote_data_source/apps_gallery_datasource.dart';
+import '../../features/grow/apps_gallery/domain/use_cases/get_app_gallery.dart';
 import '../../features/help/mentor/find_mentor/data/data_sources/remote/mentor_datasource.dart';
 import '../../features/help/mentor/find_mentor/data/repositories/mentor_repository_impl.dart';
 import '../../features/help/mentor/find_mentor/domain/repositories/mentor_repository.dart';
@@ -46,11 +46,11 @@ abstract class Injector {
   void _configureControllers();
 
   @Register.singleton(MentorRepository, from: MentorRepositoryImpl)
-  @Register.singleton(AppsRepo, from: AppsRepoImpl)
+  @Register.singleton(AppsGalleryRepo, from: AppsGalleryRepoImpl)
   void _configureRepositories();
 
   @Register.singleton(MentorDatasource)
-  @Register.singleton(AppsDataSource)
+  @Register.singleton(AppsGalleryDataSource)
   void _configureRemoteDataSources();
 
   @Register.singleton(GSApiProvider)
