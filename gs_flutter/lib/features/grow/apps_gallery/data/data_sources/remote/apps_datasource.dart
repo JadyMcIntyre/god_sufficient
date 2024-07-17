@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:god_sufficient/core/constants/constants.dart';
 import 'package:god_sufficient/core/resources/gs_api_provider.dart';
-import 'package:god_sufficient/features/grow/app/apps_gallery/data/models/app_model.dart';
+import 'package:god_sufficient/features/grow/apps_gallery/data/models/app_model.dart';
 
 class AppsDataSource {
   final GSApiProvider apiProvider;

@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
-import 'package:god_sufficient/features/grow/app/apps_gallery/data/data_sources/remote/apps_datasource.dart';
-import 'package:god_sufficient/features/grow/app/apps_gallery/data/models/app_model.dart';
-import 'package:god_sufficient/features/grow/app/apps_gallery/domain/entities/app_entity.dart';
-import 'package:god_sufficient/features/grow/app/apps_gallery/domain/repos/apps_repo.dart';
+import 'package:god_sufficient/features/grow/apps_gallery/data/data_sources/remote/apps_datasource.dart';
+import 'package:god_sufficient/features/grow/apps_gallery/data/models/app_model.dart';
+import 'package:god_sufficient/features/grow/apps_gallery/domain/entities/app_entity.dart';
+import 'package:god_sufficient/features/grow/apps_gallery/domain/repos/apps_repo.dart';
 
 class AppsRepoImpl extends AppsRepo {
   final AppsDataSource datasource;

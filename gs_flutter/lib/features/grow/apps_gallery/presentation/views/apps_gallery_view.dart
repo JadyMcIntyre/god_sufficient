@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:god_sufficient/core/widgets/error_screen.dart';
 import 'package:god_sufficient/core/widgets/loading_screen.dart';
 
-import '../../../../../../config/theme/gs_theme_data.dart';
+import '../../../../../config/theme/gs_theme_data.dart';
 import '../controllers/apps_gallery_controller.dart';
 
 class AppsGalleryView extends GetView<AppsGalleryController> {
