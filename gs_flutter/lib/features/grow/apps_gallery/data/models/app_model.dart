@@ -1,4 +1,4 @@
-import 'package:god_sufficient/features/grow/app/apps_gallery/domain/entities/app_entity.dart';
+import 'package:god_sufficient/features/grow/apps_gallery/domain/entities/app_entity.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'app_model.g.dart';

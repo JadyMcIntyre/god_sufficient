@@ -4,8 +4,8 @@ import '../../features/community/church/presentation/bindings/church_binding.dar
 import '../../features/community/church/presentation/views/church_view.dart';
 import '../../features/community/volunteer/presentation/bindings/volunteer_binding.dart';
 import '../../features/community/volunteer/presentation/views/volunteer_view.dart';
-import '../../features/grow/app/apps_gallery/presentation/bindings/apps_gallery_binding.dart';
-import '../../features/grow/app/apps_gallery/presentation/views/apps_gallery_view.dart';
+import '../../features/grow/apps_gallery/presentation/bindings/apps_gallery_binding.dart';
+import '../../features/grow/apps_gallery/presentation/views/apps_gallery_view.dart';
 import '../../features/grow/learn/presentation/bindings/learn_binding.dart';
 import '../../features/grow/learn/presentation/views/learn_view.dart';
 import '../../features/help/get_help/presentation/bindings/get_help_binding.dart';
