@@ -31,5 +31,3 @@ GodSufficient is a platform dedicated to providing free Christian resources in v
 - **Mentor**: A mentoring section split into two parts:
   - **Become a Mentor**: Resources and guidelines for those who want to mentor others.
   - **Find a Mentor**: Tools and contacts to find a mentor for personal guidance.
-
----
