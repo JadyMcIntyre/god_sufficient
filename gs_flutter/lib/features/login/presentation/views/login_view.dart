@@ -20,7 +20,7 @@ class LoginView extends GetView<LoginController> {
           const GSLogo(),
           Padding(
             padding: const EdgeInsets.only(top: 64, bottom: 24),
-            child: Text('Welcome to GodSufficient', style: GSText.title),
+            child: Text('Welcome to GodSufficient', style: GSText.title1),
           ),
           const Form(
               child: Column(

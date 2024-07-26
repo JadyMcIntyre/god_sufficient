@@ -10,7 +10,9 @@ class GSColors {
 }
 
 class GSText {
-  static TextStyle title = GoogleFonts.roboto(textStyle: const TextStyle(fontWeight: FontWeight.w700, fontSize: 20));
+  static TextStyle title1 = GoogleFonts.roboto(textStyle: const TextStyle(fontWeight: FontWeight.w700, fontSize: 20));
+
+  static TextStyle title2 = GoogleFonts.roboto(textStyle: const TextStyle(fontWeight: FontWeight.w700, fontSize: 18));
 
   static TextStyle body = GoogleFonts.roboto(textStyle: const TextStyle(fontWeight: FontWeight.w400, fontSize: 15));
 

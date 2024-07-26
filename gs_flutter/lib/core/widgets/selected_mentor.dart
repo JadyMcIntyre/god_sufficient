@@ -32,7 +32,7 @@ class SelectedMentor extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(name, style: GSText.title),
+                        Text(name, style: GSText.title1),
                         const SizedBox(height: 4),
                         Text(expertise, style: GSText.body),
                       ],

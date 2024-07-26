@@ -31,7 +31,7 @@ class FindMentorView extends GetView<FindMentorController> {
                         children: [
                           const Icon(Icons.person, size: 80),
                           const SizedBox(height: 8),
-                          Text(controller.mentors[index].name, style: GSText.title),
+                          Text(controller.mentors[index].name, style: GSText.title2),
                           Padding(
                             padding: const EdgeInsets.symmetric(vertical: 8),
                             child: Text(controller.mentors[index].testimony, style: GSText.body, textAlign: TextAlign.center),
