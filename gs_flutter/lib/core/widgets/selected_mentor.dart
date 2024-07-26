@@ -14,7 +14,7 @@ class SelectedMentor extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Meet $name:'),
+        title: Text(name),
       ),
       body: SafeArea(
         child: SingleChildScrollView(
