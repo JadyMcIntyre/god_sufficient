@@ -10,11 +10,15 @@ class GSColors {
 }
 
 class GSText {
+  static TextStyle heading = GoogleFonts.roboto(textStyle: const TextStyle(fontWeight: FontWeight.w800, fontSize: 30));
+
   static TextStyle title1 = GoogleFonts.roboto(textStyle: const TextStyle(fontWeight: FontWeight.w700, fontSize: 20));
 
   static TextStyle title2 = GoogleFonts.roboto(textStyle: const TextStyle(fontWeight: FontWeight.w700, fontSize: 18));
 
-  static TextStyle body = GoogleFonts.roboto(textStyle: const TextStyle(fontWeight: FontWeight.w400, fontSize: 15));
+  static TextStyle body1 = GoogleFonts.roboto(textStyle: const TextStyle(fontWeight: FontWeight.w400, fontSize: 15));
+
+  static TextStyle body2 = GoogleFonts.roboto(textStyle: const TextStyle(fontWeight: FontWeight.w400, fontSize: 14));
 
   static TextStyle bodySubtle =
       GoogleFonts.roboto(textStyle: const TextStyle(fontWeight: FontWeight.w400, fontSize: 15, fontStyle: FontStyle.italic));

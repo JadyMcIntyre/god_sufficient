@@ -27,7 +27,7 @@ class GSForm extends StatelessWidget {
         enabledBorder: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(12)), borderSide: BorderSide(color: GSColors.primary, width: 0.0)),
         // icon: Icon(iconPath, size: 25),
-        label: Text(label, style: GSText.body),
+        label: Text(label, style: GSText.body1),
         hintText: hint,
         hintStyle: GSText.bodySubtle,
       ),

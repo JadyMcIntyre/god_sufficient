@@ -13,37 +13,18 @@ class SelectedMentor extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(name),
-      ),
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Body(children: [
-            Card(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  children: [
-                    const CircleAvatar(
-                      radius: 40,
-                      child: Icon(Icons.face_2, size: 30),
-                    ),
-                    const SizedBox(width: 16),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(name, style: GSText.title1),
-                        const SizedBox(height: 4),
-                        Text(expertise, style: GSText.body),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ]),
+      appBar: AppBar(),
+      body: Body(isMainCentered: false, children: [
+        ListTile(
+          visualDensity: const VisualDensity(horizontal: 4),
+          leading: const Icon(Icons.face, size: 80),
+          title: Text(name),
+          titleTextStyle: GSText.heading,
+          isThreeLine: true,
+          subtitle: Text(expertise),
+          subtitleTextStyle: GSText.body1,
         ),
-      ),
+      ]),
       bottomNavigationBar: GSFilledButton.oneButton(
         elevatedBtText: 'Connect',
         elevatedBtAction: () {},

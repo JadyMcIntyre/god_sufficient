@@ -33,7 +33,7 @@ class SectionCard extends StatelessWidget {
           const SizedBox(height: 5),
           ToggleDescription(
             title: Text(title, style: GSText.title1),
-            description: Text(body, style: GSText.body),
+            description: Text(body, style: GSText.body1),
           ),
           button,
         ],

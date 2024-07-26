@@ -44,7 +44,7 @@ class AppsGalleryView extends GetView<AppsGalleryController> {
                         const SizedBox(
                           height: 8,
                         ),
-                        Text(controller.apps[index].title, style: GSText.body),
+                        Text(controller.apps[index].title, style: GSText.body1),
                       ],
                     ),
                   ),
