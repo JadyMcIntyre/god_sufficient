@@ -17,5 +17,5 @@ class GSText {
   static TextStyle bodySubtle =
       GoogleFonts.roboto(textStyle: const TextStyle(fontWeight: FontWeight.w400, fontSize: 15, fontStyle: FontStyle.italic));
 
-  static TextStyle button = GoogleFonts.roboto(textStyle: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16));
+  static TextStyle button = GoogleFonts.roboto(textStyle: const TextStyle(fontWeight: FontWeight.w500, fontSize: 16));
 }
