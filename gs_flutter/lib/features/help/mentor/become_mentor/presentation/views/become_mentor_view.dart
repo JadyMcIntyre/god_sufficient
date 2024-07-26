@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:god_sufficient/core/widgets/gs_form.dart';
 
 import '../../../../../../core/widgets/body.dart';
-import '../../../../../../core/widgets/button.dart';
+import '../../../../../../core/widgets/filled_button.dart';
 import '../controllers/become_mentor_controller.dart';
 
 class BecomeMentorView extends GetView<BecomeMentorController> {
@@ -48,7 +48,7 @@ class BecomeMentorView extends GetView<BecomeMentorController> {
           ),
         ],
       ),
-      bottomNavigationBar: Button.oneButton(
+      bottomNavigationBar: GSFilledButton.oneButton(
         elevatedBtText: 'Submit',
         elevatedBtAction: () {},
       ),

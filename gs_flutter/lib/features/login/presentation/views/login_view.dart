@@ -4,7 +4,7 @@ import 'package:god_sufficient/config/routes/app_pages.dart';
 import 'package:god_sufficient/config/theme/images.dart';
 import 'package:god_sufficient/core/widgets/body.dart';
 
-import '../../../../core/widgets/button.dart';
+import '../../../../core/widgets/filled_button.dart';
 import '../../../../core/widgets/gs_form.dart';
 import '../controllers/login_controller.dart';
 
@@ -24,7 +24,7 @@ class LoginView extends GetView<LoginController> {
               GSForm(label: 'Password', hint: AutofillHints.password, iconPath: Icons.lock),
             ],
           )),
-          Button.oneButton(
+          GSFilledButton.oneButton(
             elevatedBtText: 'Login',
             elevatedBtAction: () {
               Get.offNamed(Routes.home);

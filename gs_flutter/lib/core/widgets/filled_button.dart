@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:god_sufficient/config/theme/gs_theme_data.dart';
 
-class Button extends StatelessWidget {
+class GSFilledButton extends StatelessWidget {
   final bool hasOneButton;
   final String elevatedBtText;
   final String? outlinedBtText;
@@ -9,7 +9,7 @@ class Button extends StatelessWidget {
   final VoidCallback? outlinedBtAction;
   final bool hasPadding;
 
-  const Button.oneButton({
+  const GSFilledButton.oneButton({
     super.key,
     required this.elevatedBtText,
     required this.elevatedBtAction,
@@ -18,7 +18,7 @@ class Button extends StatelessWidget {
         outlinedBtText = null,
         outlinedBtAction = null;
 
-  const Button.twoButtons({
+  const GSFilledButton.twoButtons({
     super.key,
     required this.elevatedBtText,
     required this.outlinedBtText,
@@ -37,11 +37,10 @@ class Button extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Expanded(
-              child: ElevatedButton(
+              child: FilledButton(
                 style: const ButtonStyle(
                   backgroundColor: WidgetStatePropertyAll(GSColors.teal),
                   foregroundColor: WidgetStatePropertyAll(Colors.white),
-                  shadowColor: WidgetStatePropertyAll(GSColors.offWhite),
                 ),
                 onPressed: elevatedBtAction,
                 child: Text(elevatedBtText, style: GSText.button),
@@ -51,9 +50,10 @@ class Button extends StatelessWidget {
             Visibility(
               visible: !hasOneButton,
               child: Expanded(
-                child: OutlinedButton(
+                child: FilledButton(
                   style: const ButtonStyle(
-                    foregroundColor: WidgetStatePropertyAll(GSColors.orange),
+                    backgroundColor: WidgetStatePropertyAll(GSColors.orange),
+                    foregroundColor: WidgetStatePropertyAll(Colors.white),
                     side: WidgetStatePropertyAll(BorderSide(color: GSColors.orange)),
                   ),
                   onPressed: outlinedBtAction,

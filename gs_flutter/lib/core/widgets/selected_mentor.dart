@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:god_sufficient/config/theme/gs_theme_data.dart';
 import 'package:god_sufficient/core/widgets/body.dart';
 
-import 'button.dart';
+import 'filled_button.dart';
 
 class SelectedMentor extends StatelessWidget {
   final String name;
@@ -44,7 +44,7 @@ class SelectedMentor extends StatelessWidget {
           ]),
         ),
       ),
-      bottomNavigationBar: Button.oneButton(
+      bottomNavigationBar: GSFilledButton.oneButton(
         elevatedBtText: 'Connect',
         elevatedBtAction: () {},
       ),

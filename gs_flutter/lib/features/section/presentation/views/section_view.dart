@@ -32,14 +32,13 @@ class SectionView extends GetView<SectionController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Body(
-          children: [
-            SectionCard(title: featureOneTitle, body: featureOneBody, button: featureOneButton),
-            const SizedBox(height: 16),
-            SectionCard(title: featureTwoTitle, body: featureTwoBody, button: featureTwoButton),
-          ],
-        ),
+      body: Body(
+        isScrollable: true,
+        children: [
+          SectionCard(title: featureOneTitle, body: featureOneBody, button: featureOneButton),
+          const SizedBox(height: 16),
+          SectionCard(title: featureTwoTitle, body: featureTwoBody, button: featureTwoButton),
+        ],
       ),
     );
   }

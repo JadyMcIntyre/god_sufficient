@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 import '../../../../config/routes/app_pages.dart';
-import '../../../../core/widgets/button.dart';
+import '../../../../core/widgets/filled_button.dart';
 import '../../../section/presentation/views/section_view.dart';
 
 class HomeController extends GetxController {
@@ -16,8 +16,8 @@ class HomeController extends GetxController {
       'Mentor',
       'Connect with individuals who\'ve overcome struggles with God\'s help. Share your journey, receive guidance, or become a mentor to support others.',
       () => Get.toNamed(Routes.mentor),
-      Button.oneButton(elevatedBtText: 'Find Help', elevatedBtAction: () => Get.toNamed(Routes.help), hasPadding: false),
-      Button.twoButtons(
+      GSFilledButton.oneButton(elevatedBtText: 'Find Help', elevatedBtAction: () => Get.toNamed(Routes.help), hasPadding: false),
+      GSFilledButton.twoButtons(
         elevatedBtText: 'Find',
         outlinedBtText: 'Become',
         elevatedBtAction: () => Get.toNamed(Routes.findMentor),
@@ -33,8 +33,8 @@ class HomeController extends GetxController {
       'Volunteer',
       'Participate in or advertise community and church events, big or small, to volunteer and make an impact.',
       () => Get.toNamed(Routes.volunteer),
-      Button.oneButton(elevatedBtText: 'Churches Near You', elevatedBtAction: () => Get.toNamed(Routes.church), hasPadding: false),
-      Button.twoButtons(
+      GSFilledButton.oneButton(elevatedBtText: 'Near You', elevatedBtAction: () => Get.toNamed(Routes.church), hasPadding: false),
+      GSFilledButton.twoButtons(
         elevatedBtText: 'Join',
         outlinedBtText: 'Host',
         elevatedBtAction: () => Get.toNamed(Routes.volunteer),
@@ -50,8 +50,8 @@ class HomeController extends GetxController {
       'Learn',
       'Access free Christian resources that align with Biblical teachings, available in formats to read, watch, and listen, to nurture your faith and understanding.',
       () => Get.toNamed(Routes.learn),
-      Button.oneButton(elevatedBtText: 'Explore', elevatedBtAction: () => Get.toNamed(Routes.appsGallery), hasPadding: false),
-      Button.oneButton(elevatedBtText: 'Explore', elevatedBtAction: () => Get.toNamed(Routes.learn), hasPadding: false),
+      GSFilledButton.oneButton(elevatedBtText: 'Explore', elevatedBtAction: () => Get.toNamed(Routes.appsGallery), hasPadding: false),
+      GSFilledButton.oneButton(elevatedBtText: 'Explore', elevatedBtAction: () => Get.toNamed(Routes.learn), hasPadding: false),
     ),
   ];
 
