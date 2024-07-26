@@ -21,7 +21,10 @@ class SelectedMentor extends StatelessWidget {
           title: Text(name),
           titleTextStyle: GSText.heading,
           isThreeLine: true,
-          subtitle: Text(expertise),
+          subtitle: Padding(
+            padding: const EdgeInsets.only(top: 16),
+            child: Text(expertise),
+          ),
           subtitleTextStyle: GSText.body1,
         ),
       ]),
