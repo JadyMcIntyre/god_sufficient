@@ -17,7 +17,16 @@ class GSForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       decoration: InputDecoration(
-        icon: Icon(iconPath, size: 25),
+        focusedBorder: const OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(12)),
+          borderSide: BorderSide(
+            color: GSColors.primary,
+            width: 1.0,
+          ),
+        ),
+        enabledBorder: const OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(12)), borderSide: BorderSide(color: GSColors.primary, width: 0.0)),
+        // icon: Icon(iconPath, size: 25),
         label: Text(label, style: GSText.body),
         hintText: hint,
         hintStyle: GSText.bodySubtle,

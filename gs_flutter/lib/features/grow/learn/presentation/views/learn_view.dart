@@ -21,10 +21,10 @@ class LearnView extends GetView<LearnController> {
           onTap: controller.changeTabIndex,
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-                icon: Icon(Icons.menu_book_outlined), label: 'Read', activeIcon: Icon(Icons.menu_book_outlined, color: GSColors.teal)),
-            BottomNavigationBarItem(icon: Icon(Icons.tv), label: 'Watch', activeIcon: Icon(Icons.tv, color: GSColors.teal)),
+                icon: Icon(Icons.menu_book_outlined), label: 'Read', activeIcon: Icon(Icons.menu_book_outlined, color: GSColors.primary)),
+            BottomNavigationBarItem(icon: Icon(Icons.tv), label: 'Watch', activeIcon: Icon(Icons.tv, color: GSColors.primary)),
             BottomNavigationBarItem(
-                icon: Icon(Icons.headphones), label: 'Listen', activeIcon: Icon(Icons.headphones, color: GSColors.teal)),
+                icon: Icon(Icons.headphones), label: 'Listen', activeIcon: Icon(Icons.headphones, color: GSColors.primary)),
           ],
         ),
       ),

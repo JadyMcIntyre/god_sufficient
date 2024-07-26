@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class GSColors {
-  static const Color teal = Colors.teal;
+  static const Color primary = Colors.teal;
 
-  static const Color orange = Color.fromRGBO(255, 99, 51, 1);
+  static const Color secondary = Color.fromRGBO(255, 99, 51, 1);
 
   static const Color offWhite = Color.fromRGBO(255, 255, 255, 0.2);
 }

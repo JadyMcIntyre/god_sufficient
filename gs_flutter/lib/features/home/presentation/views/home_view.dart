@@ -19,16 +19,16 @@ class HomeView extends GetView<HomeController> {
           currentIndex: controller.tabIndex.value,
           onTap: controller.changeTabIndex,
           items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(icon: Icon(Icons.help), label: 'Help', activeIcon: Icon(Icons.help, color: GSColors.teal)),
+            BottomNavigationBarItem(icon: Icon(Icons.help), label: 'Help', activeIcon: Icon(Icons.help, color: GSColors.primary)),
             BottomNavigationBarItem(
               icon: Icon(Icons.people),
               label: 'Community',
-              activeIcon: Icon(Icons.people, color: GSColors.teal),
+              activeIcon: Icon(Icons.people, color: GSColors.primary),
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.arrow_circle_up_sharp),
               label: 'Grow',
-              activeIcon: Icon(Icons.arrow_circle_up_sharp, color: GSColors.teal),
+              activeIcon: Icon(Icons.arrow_circle_up_sharp, color: GSColors.primary),
             ),
           ],
         ),

@@ -37,27 +37,39 @@ class GSFilledButton extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Expanded(
-              child: FilledButton(
-                style: const ButtonStyle(
-                  backgroundColor: WidgetStatePropertyAll(GSColors.teal),
-                  foregroundColor: WidgetStatePropertyAll(Colors.white),
+              child: SizedBox(
+                height: 50,
+                child: FilledButton(
+                  style: const ButtonStyle(
+                    shape: WidgetStatePropertyAll(RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(12)),
+                    )),
+                    backgroundColor: WidgetStatePropertyAll(GSColors.primary),
+                    foregroundColor: WidgetStatePropertyAll(Colors.white),
+                  ),
+                  onPressed: elevatedBtAction,
+                  child: Text(elevatedBtText, style: GSText.button),
                 ),
-                onPressed: elevatedBtAction,
-                child: Text(elevatedBtText, style: GSText.button),
               ),
             ),
             const SizedBox(width: 8),
             Visibility(
               visible: !hasOneButton,
               child: Expanded(
-                child: FilledButton(
-                  style: const ButtonStyle(
-                    backgroundColor: WidgetStatePropertyAll(GSColors.orange),
-                    foregroundColor: WidgetStatePropertyAll(Colors.white),
-                    side: WidgetStatePropertyAll(BorderSide(color: GSColors.orange)),
+                child: SizedBox(
+                  height: 50,
+                  child: FilledButton(
+                    style: const ButtonStyle(
+                      shape: WidgetStatePropertyAll(RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(12)),
+                      )),
+                      backgroundColor: WidgetStatePropertyAll(GSColors.secondary),
+                      foregroundColor: WidgetStatePropertyAll(Colors.white),
+                      side: WidgetStatePropertyAll(BorderSide(color: GSColors.secondary)),
+                    ),
+                    onPressed: outlinedBtAction,
+                    child: Text(outlinedBtText ?? '', style: GSText.button),
                   ),
-                  onPressed: outlinedBtAction,
-                  child: Text(outlinedBtText ?? '', style: GSText.button),
                 ),
               ),
             ),
